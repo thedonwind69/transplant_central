@@ -20,4 +20,4 @@
 
 # Ignore bundles
 bundle.js
-bundle.min.js
+bundle.map.js
