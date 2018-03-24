@@ -37,7 +37,7 @@ class CityShow extends React.Component {
 
     render () {  
         const { currentCity } = this.props;
-        
+        console.log('fuck u');
             return (
                 <div>
                     <div class="city-profile-header">
