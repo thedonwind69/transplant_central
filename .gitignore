@@ -17,3 +17,7 @@
 /yarn-error.log
 
 .byebug_history
+
+# Ignore bundles
+bundle.js
+bundle.min.js
