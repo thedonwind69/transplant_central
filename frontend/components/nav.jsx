@@ -28,11 +28,11 @@ import {
             return (
                 <div class="nav-bar-container">
                     <nav class="nav-bar">
-                            <p>
-                                <Link class={'nav-link'} to="/home">Home</Link>
-                            </p>
+                            <ul class="nav-bar-list left">
+                                <li> <Link class={'nav-link'} to="/home">Home</Link> </li>
+                            </ul>
                         
-                        <ul class="nav-bar-list">
+                        <ul class="nav-bar-list right">
                             <li>
                                 <button class={'nav-link'} onClick={this.logout.bind(this)}>Logout</button>
                             </li>
@@ -49,12 +49,12 @@ import {
                 <div class="nav-bar-flex">
                     <div class="nav-bar-container">
                         <nav class="nav-bar">
-                                <p>
-                                    <Link class={'nav-link'} to="/home">Home</Link>
-                                </p>
-                            
 
-                             <ul class="nav-bar-list">
+                            <ul class="nav-bar-list left">
+                                <li> <Link class={'nav-link'} to="/home">Home</Link> </li>
+                            </ul>
+
+                             <ul class="nav-bar-list right">
                                 <li>
                                     <Link class={'nav-link'} to="/login">LogIn</Link>
                                 </li>
