@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import {
     Route,
     Redirect,
@@ -20,13 +19,12 @@ class CityShow extends React.Component {
     }
 
     componentDidMount () {
-        const {fetchCity, fetchCategories, currentCity} = this.props;
+        const { fetchCity, fetchCategories, currentCity } = this.props;
         fetchCity(this.props.match.params.city_id);
     }
 
     componentWillReceiveProps (newProps) {
-        const {fetchCity, fetchCategories, currentCity} = this.props;
-        console.log('new city id', newProps.match.params.city_id);
+        const { fetchCity } = this.props;
         if (newProps.match.params.city_id !== this.props.match.params.city_id) {
             fetchCity(newProps.match.params.city_id);
         }
