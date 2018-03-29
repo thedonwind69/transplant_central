@@ -40,16 +40,24 @@ class CityShow extends React.Component {
       
             return (
                 <div>
-                    <div class="city-profile-header">
+                    {/* <div class="city-profile-header1">
                         <h1>{currentCity.name}</h1>
+                    </div> */}
+
+                    <div class='city-profile-pic-container'>
+                        <div class={`city-profile-pic ${this.profilePicClass()}`}>
+                            <h1 class='city-profile-header2'>{currentCity.name}</h1>
+                        </div>
                     </div>
-                   <div class={`city-profile-pic ${this.profilePicClass()}`}>
-                    </div>
+                   
                     <br />
+
                     <div>
                         <CityPostFormContainer />
                     </div>
+
                     <PostsDisplayContainer />
+
                 </div>
             )
     }

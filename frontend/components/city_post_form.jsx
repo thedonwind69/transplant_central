@@ -73,12 +73,13 @@ class CityPostForm extends React.Component {
         return (event) => {
             this.setState({
                 [field]: event.currentTarget.value,
-                city_id: this.props.currentCity.id ? this.props.currentCity.id : null
+                city_id: this.props.match.params.city_id
             })
         }
     }
    
     render () {
+
         return (
             <div>
                 <div>
@@ -136,4 +137,4 @@ class CityPostForm extends React.Component {
 
 }
 
-export default CityPostForm;
+export default withRouter(CityPostForm);

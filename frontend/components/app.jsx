@@ -15,6 +15,7 @@ import Footer from './footer';
 
 import GreetingContainer from './greeting_container';
 
+import UserShowContainer from './user_show_container';
 
 import {AuthRoute, ProtectedRoute} from '../util/route_util.jsx';
 
@@ -40,7 +41,9 @@ class App extends React.Component {
 
                     <Route path="/home" component={HomePageContainer} />
 
-                    <Route path="/cities/:city_id" component={CityShowContainer}  />
+                    <Route path="/cities/:city_id" component={CityShowContainer} />
+
+                    <Route path="/users/:user_id" component={UserShowContainer} />
 
                     <AuthRoute path="/login" component={SessionFormContainer} />
                     <AuthRoute path="/signup" component={SessionFormContainer} />

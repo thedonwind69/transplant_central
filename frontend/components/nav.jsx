@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import {
     Route,
     Redirect,
@@ -10,6 +8,7 @@ import {
     withRouter
   } from 'react-router-dom';
 
+import SearchBarContainer from './search_bar';
 
   class Nav extends React.Component {
 
@@ -23,18 +22,20 @@ import {
     }
 
     render () {
-
+    
         if (this.props.currentUser) {
             return (
                 <div class="nav-bar-container">
                     <nav class="nav-bar">
-                            <ul class="nav-bar-list left">
-                                <li> <Link class={'nav-link'} to="/home">Home</Link> </li>
-                            </ul>
+                        <ul class="nav-bar-list left">
+                            <li> <Link class={'nav-link'} to="/home">Home</Link> </li>
+                            <li> <Link class={'nav-link'} to="/">Greeting</Link> </li>
+                            <li> <SearchBarContainer /> </li>
+                        </ul>
                         
                         <ul class="nav-bar-list right">
                             <li>
-                                <button class={'nav-link'} onClick={this.logout.bind(this)}>Logout</button>
+                                <button class={'logout-button'} onClick={this.logout.bind(this)}>Logout</button>
                             </li>
                         </ul>
 
@@ -52,6 +53,8 @@ import {
 
                             <ul class="nav-bar-list left">
                                 <li> <Link class={'nav-link'} to="/home">Home</Link> </li>
+                                <li> <Link class={'nav-link'} to="/">Greeting</Link> </li>
+                                <li> <SearchBarContainer /> </li>
                             </ul>
 
                              <ul class="nav-bar-list right">
@@ -62,22 +65,15 @@ import {
                                     <Link class={'nav-link'} to="/signup">SignUp</Link>
                                 </li>
                             </ul>
-                           
-                
+
                         </nav>
                     </div>
                 </div>
-                   
-               
             )
         }
-
         //end of render method
     }
 
-
   }
-
-
-
+ 
   export default withRouter(Nav);

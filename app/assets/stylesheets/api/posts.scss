@@ -5,19 +5,19 @@
 .post-tabs {
     display: block;
     font-size: 15px;
+    background-color: rgb(13, 41, 152);
+    margin: 0;
 }
 
 .post-tabs ul {
     display: flex;
-    position: relative;
-    right: 40px;
+    padding: 0;
     text-align: center;
 }
 
 .post-tab {
     padding: 7px;
     min-width: 120px;
-    border-radius: 10px;
     background: rgb(13, 41, 152);
     color: white;
 }
@@ -93,7 +93,6 @@
 }
 
 .post-index-item-rating {
-
     color: rgb(255, 174, 0);
 }
 
@@ -108,9 +107,22 @@
 }
 
 .post-index-item-content {
-    // display: inline-block;
-    // border: 1px solid gray;
     max-width: 550px;
     font-size: 17px;
-   
+}
+
+.total-rating {
+    display: inline-block;
+    padding: 0px;
+    margin-left: 5px;
+    font-size: 21px;
+    color: rgb(255, 174, 0);
+}
+
+@media screen and (max-width: 550px) {
+
+    .post-tabs ul {
+        display: block;
+    }
+
 }

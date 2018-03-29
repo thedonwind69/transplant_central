@@ -36,56 +36,60 @@ class PostsDisplay extends React.Component {
         this.props.fetchPosts(this.props.match.params.city_id);
     }
 
-    render () {
-       
-        const {currentCity, categories, allPosts} = this.props;
-
-        // const all_categories = categories.map((category) => {
-        //     return <li 
-        //         class='post-tab' 
-        //         onClick={this.changeCategory.bind(this)}
-        //         id={`${category.id}`}
-        //         tabIndex={`${category.id}`}
-        //         >
-        //         {category.name}
-        //     </li>
-        // });
-
+    all_categories () {
+        const {categories, allPosts} = this.props;
         const all_categories = categories.map((category) => {
-            return <CategoryIndexItem  changeCategory={this.changeCategory.bind(this)} category={category}/>
+            return <CategoryIndexItem  changeCategory={this.changeCategory.bind(this)} category={category} posts={allPosts}/>
         });
+        return all_categories;
+    }
 
-       
+    allThePosts () {
+        const {categories, allPosts} = this.props;
         const allThePosts = allPosts.map((post) => {
             let currentCategoryId = this.state.currentCategoryId;
             if (post.category_id === parseInt(currentCategoryId)) {
-                
                 return <PostIndexItem post={post} currentCategoryId={this.state.currentCategoryId}  />
             }
         });
+        return allThePosts.reverse();
+    }
 
+    totalRating () {
+        const {allPosts} = this.props;
+        let overallRating = 0;
+        allPosts.forEach((post) => {
+            overallRating += post.rating;
+        })
+        const finalRating = (overallRating / allPosts.length).toFixed(1);
+        if (overallRating / allPosts.length > 0) {
+            return <h1>{finalRating} Stars</h1>
+        }
+    }
+
+    render () {
+       
         return (
             <div>
+
+                <div class="total-rating">
+                    {this.totalRating()}
+                </div>
+
                 <div class='post-tabs'>
                     <ul>
-                        {all_categories}
+                        {this.all_categories()}
                     </ul>    
                 </div>
 
-                <br/>
-
-
                 <div>
-                    {allThePosts.reverse()}
+                    {this.allThePosts()}
                 </div>
-
 
             </div>
         )
     }
 
-
 }
-
 
 export default withRouter(PostsDisplay);
