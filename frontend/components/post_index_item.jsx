@@ -13,16 +13,7 @@ class PostIndexItem extends React.Component {
     constructor(props) {
         super(props);
     }
-
-    postRatingStars () {
-        const {post} = this.props;
-        let totalStars = null;
-        for (let i=0; i <= post.rating; i++) {
-           totalStars += React.createElement({type:'span', class: "fa fa-star"});
-        }
-        return totalStars;
-    }
-
+    
     userShowLink () {
         const {post} = this.props;
         return (

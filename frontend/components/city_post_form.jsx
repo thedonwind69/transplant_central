@@ -47,7 +47,6 @@ class CityPostForm extends React.Component {
         }   
     }
 
-
     toggleForm () {
         const postForm = ReactDOM.findDOMNode(this.refs.postForm);
         postForm.classList.toggle('hide-this-shit');
@@ -77,6 +76,27 @@ class CityPostForm extends React.Component {
             })
         }
     }
+
+    // setStar (field) {
+    //     return (event) => {
+    //         event.preventDefault();
+    //         let star = event.currentTarget;
+    //         // star.classList.remove('active');
+    //         // star.classList.add('active');
+    //         // $(star).prevAll().removeClass('secondary-active');
+    //         // $(star).prevAll().addClass('secondary-active');
+    //         $(star).removeClass('active');
+    //         $(star).removeClass('secondary-active');
+    //         $(star).prevAll().removeClass('active');
+    //         $(star).prevAll().removeClass('secondary-active');
+    //         $(star).addClass('active');
+    //         $(star).prevAll().addClass('secondary-active');
+    //         this.setState({
+    //             [field]: event.currentTarget.value,
+    //         })
+    //         console.log(event.currentTarget.value);
+    //     }
+    // }
    
     render () {
 
@@ -117,6 +137,18 @@ class CityPostForm extends React.Component {
                                 <option value="1">1</option>
                             </select>
                                 <br /><br />
+
+                            {/* <div class='star-rating-container'>
+                            <ul class='star-rating-list'>
+                                <li onClick={this.setStar('rating')} value='1'><label for='star1'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star1' value='1'/></li>
+                                <li onClick={this.setStar('rating')} value='2'><label for='star2'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star2' value='2'/></li>
+                                <li onClick={this.setStar('rating')} value='3'><label for='star3'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star3' value='3'/></li>
+                                <li onClick={this.setStar('rating')} value='4'><label for='star4'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star4' value='4'/></li>
+                                <li onClick={this.setStar('rating')} value='5'><label for='star5'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star5' value='5'/></li>
+                            </ul>
+                            </div> */}
+
+
 
                         <label for='content'>Content</label>
                             <br />

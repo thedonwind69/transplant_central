@@ -1,14 +1,14 @@
 class Api::PostsController < ApplicationController
 
     def index
-        @city = City.find(params[:city_id])
-        @all_posts = @city.posts
-        render :index
+        if @city = City.find(params[:city_id])
+          @all_posts = @city.posts
+          render :index
+        elsif  @user = User.find(params[:user_id])
+          @all_posts = @user.posts
+          render :index
+        end
     end
-
-    
-
-
 
     def create
       @post = Post.create(post_params)
@@ -17,9 +17,7 @@ class Api::PostsController < ApplicationController
       else
         render json: @post.errors, status: :unprocessable_entity
       end
-
     end
-
 
     private
 
@@ -34,7 +32,6 @@ class Api::PostsController < ApplicationController
       )
     end
     
-
 end
 
 

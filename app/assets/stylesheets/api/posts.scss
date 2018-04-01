@@ -119,6 +119,36 @@
     color: rgb(255, 174, 0);
 }
 
+input[type='radio'] {
+    display: none;
+}
+
+.star-rating-container {
+     width: 300px;
+    margin: auto;
+}
+
+.star-rating-list {
+    display: flex;
+   font-size: 25px;
+   
+}
+
+.star-rating-list li {
+    color: white;
+    text-shadow: 2px 2px 7px gray;
+}
+
+.star-rating-list li:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+.star-rating-list li.active, .star-rating-list li.secondary-active {
+    color: yellow;
+}
+
+
 @media screen and (max-width: 550px) {
 
     .post-tabs ul {
