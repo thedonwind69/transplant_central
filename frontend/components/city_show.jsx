@@ -19,7 +19,7 @@ class CityShow extends React.Component {
     }
 
     componentDidMount () {
-        const { fetchCity, fetchCategories, currentCity } = this.props;
+        const { fetchCity } = this.props;
         fetchCity(this.props.match.params.city_id);
     }
 

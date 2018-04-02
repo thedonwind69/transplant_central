@@ -57,8 +57,12 @@ class CityPostForm extends React.Component {
         postFormReset.reset();
         const postCategory = ReactDOM.findDOMNode(this.refs.postCategory);
         const postRating = ReactDOM.findDOMNode(this.refs.postRating);
+        const starList = ReactDOM.findDOMNode(this.refs.starList);
         postCategory.selectedIndex = 0;
-        postRating.selectedIndex = 0;
+        for (let i=0; i<starList.children.length; i++) {
+            starList.children[i].classList.remove('active');
+            starList.children[i].classList.remove('secondary-active');
+        }
     }
 
     submitPost (event) {
@@ -77,26 +81,32 @@ class CityPostForm extends React.Component {
         }
     }
 
-    // setStar (field) {
-    //     return (event) => {
-    //         event.preventDefault();
-    //         let star = event.currentTarget;
-    //         // star.classList.remove('active');
-    //         // star.classList.add('active');
-    //         // $(star).prevAll().removeClass('secondary-active');
-    //         // $(star).prevAll().addClass('secondary-active');
-    //         $(star).removeClass('active');
-    //         $(star).removeClass('secondary-active');
-    //         $(star).prevAll().removeClass('active');
-    //         $(star).prevAll().removeClass('secondary-active');
-    //         $(star).addClass('active');
-    //         $(star).prevAll().addClass('secondary-active');
-    //         this.setState({
-    //             [field]: event.currentTarget.value,
-    //         })
-    //         console.log(event.currentTarget.value);
-    //     }
-    // }
+    getFuckingIndex (element) {
+        const fuckingIndex = Array.prototype.indexOf.call(element.parentNode.children, element);
+        return fuckingIndex;
+    }
+
+    setStar (field) {
+        return (event) => {
+            event.preventDefault();
+            const starList = ReactDOM.findDOMNode(this.refs.starList);
+            let star = event.currentTarget;
+            const currentStarIndex = this.getFuckingIndex(star);
+            star.classList.remove('active');
+            for (let i=0; i<starList.children.length; i++) {
+                starList.children[i].classList.remove('active');
+                starList.children[i].classList.remove('secondary-active');
+            }
+            star.classList.add('active');
+            for (let j=0; j<currentStarIndex; j++) {
+                starList.children[j].classList.add('secondary-active');
+            }
+            this.setState({
+                [field]: event.currentTarget.value,
+            })
+        }
+    }
+
    
     render () {
 
@@ -105,7 +115,6 @@ class CityPostForm extends React.Component {
                 <div>
                     {this.formButton()}
                 </div>
-
 
                 <br />
 
@@ -127,40 +136,25 @@ class CityPostForm extends React.Component {
                             </select>
                                 <br /><br />
                             <label>Rating</label>
-                                <br />
-                            <select class='post-category-dropdown' ref='postRating' onChange={this.update('rating')}>
-                                <option value="" selected disabled hidden>Choose Rating</option>
-                                <option value="5">5</option>
-                                <option value="4">4</option>
-                                <option value="3">3</option>
-                                <option value="2">2</option>
-                                <option value="1">1</option>
-                            </select>
-                                <br /><br />
 
-                            {/* <div class='star-rating-container'>
-                            <ul class='star-rating-list'>
+                        <div class='star-rating-container'>
+                            <ul class='star-rating-list' ref='starList'>
                                 <li onClick={this.setStar('rating')} value='1'><label for='star1'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star1' value='1'/></li>
                                 <li onClick={this.setStar('rating')} value='2'><label for='star2'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star2' value='2'/></li>
                                 <li onClick={this.setStar('rating')} value='3'><label for='star3'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star3' value='3'/></li>
                                 <li onClick={this.setStar('rating')} value='4'><label for='star4'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star4' value='4'/></li>
                                 <li onClick={this.setStar('rating')} value='5'><label for='star5'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star5' value='5'/></li>
                             </ul>
-                            </div> */}
-
-
+                        </div>
 
                         <label for='content'>Content</label>
                             <br />
                         <textarea id='content' class='post-content' onChange={this.update('content')}></textarea>
                             
-                            
                             <br /><br />
                         <input class='post-submit-button' type='submit' value='Submit Post' />
                     </form>
                 </div>
-
-
 
             </div>
         )

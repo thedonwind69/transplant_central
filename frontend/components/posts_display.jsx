@@ -36,6 +36,13 @@ class PostsDisplay extends React.Component {
         this.props.fetchPosts(this.props.match.params.city_id);
     }
 
+    componentWillReceiveProps (newProps) {
+        const { fetchPosts} = this.props;
+        if (newProps.match.params.city_id !== this.props.match.params.city_id) {
+            fetchPosts(newProps.match.params.city_id);
+        }
+    }
+
     all_categories () {
         const {categories, allPosts} = this.props;
         const all_categories = categories.map((category) => {
@@ -90,6 +97,11 @@ class PostsDisplay extends React.Component {
         )
     }
 
+}
+
+PostsDisplay.defaultProps = {
+    allPosts: null,
+    categories: null
 }
 
 export default withRouter(PostsDisplay);

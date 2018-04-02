@@ -124,19 +124,20 @@ input[type='radio'] {
 }
 
 .star-rating-container {
-     width: 300px;
+    width: 300px;
     margin: auto;
+    padding: 0;
 }
 
 .star-rating-list {
-    display: flex;
-   font-size: 25px;
+display: flex;
+   font-size: 28px;
    
 }
 
 .star-rating-list li {
     color: white;
-    text-shadow: 2px 2px 7px gray;
+    text-shadow: 2px 2px 5px gray;
 }
 
 .star-rating-list li:hover {
