@@ -1,7 +1,5 @@
 import React from 'react';
-
 import ReactDOM from 'react-dom';
-
 import {
     Route,
     Redirect,
@@ -109,7 +107,7 @@ class CityPostForm extends React.Component {
 
    
     render () {
-
+    
         return (
             <div>
                 <div>

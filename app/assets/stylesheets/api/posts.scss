@@ -130,8 +130,8 @@ input[type='radio'] {
 }
 
 .star-rating-list {
-display: flex;
-   font-size: 28px;
+    display: flex;
+    font-size: 28px;
    
 }
 
@@ -149,6 +149,17 @@ display: flex;
     color: yellow;
 }
 
+.post-star-rating-list {
+    display: flex;
+    font-size: 25px;
+    padding: 0;
+}
+
+.post-star-rating-list li {
+    color: orange;
+    text-shadow: 2px 2px 5px gray;
+    padding: 2px;
+}
 
 @media screen and (max-width: 550px) {
 
