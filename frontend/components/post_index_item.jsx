@@ -56,11 +56,6 @@ class PostIndexItem extends React.Component {
         )
     }
 
-
-
 }
-
-
-
 
 export default PostIndexItem;

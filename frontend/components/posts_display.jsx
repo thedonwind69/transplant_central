@@ -1,6 +1,4 @@
-
 import React from 'react';
-
 import {
     Route,
     Redirect,
@@ -11,7 +9,6 @@ import {
   } from 'react-router-dom';
 
 import PostIndexItem from './post_index_item';
-
 import CategoryIndexItem from './category_index_item';
 
 class PostsDisplay extends React.Component {
@@ -23,14 +20,6 @@ class PostsDisplay extends React.Component {
         }
     }
     
-    changeCategory (event) {
-        event.preventDefault();
-        this.setState({
-            currentCategory: event.currentTarget.innerHTML,
-            currentCategoryId: event.currentTarget.getAttribute('id')
-        })
-    }
-
     componentDidMount () {
         this.props.fetchCategories();
         this.props.fetchPosts(this.props.match.params.city_id);
@@ -41,6 +30,14 @@ class PostsDisplay extends React.Component {
         if (newProps.match.params.city_id !== this.props.match.params.city_id) {
             fetchPosts(newProps.match.params.city_id);
         }
+    }
+
+    changeCategory (event) {
+        event.preventDefault();
+        this.setState({
+            currentCategory: event.currentTarget.innerHTML,
+            currentCategoryId: event.currentTarget.getAttribute('id')
+        })
     }
 
     all_categories () {

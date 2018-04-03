@@ -69,7 +69,7 @@
 }
 
 .post-form-container {
-    background: rgb(249, 249, 249);
+    background: #f9f9f9;
     border-radius: 10px;
     padding: 7px;
     text-align: center;
@@ -119,6 +119,15 @@
     color: rgb(255, 174, 0);
 }
 
+.total-rating h1 {
+    margin: 0;
+}
+
+.not-logged-in-message {
+    margin: 0;
+    margin-left: 5px;
+}
+
 input[type='radio'] {
     display: none;
 }
@@ -126,13 +135,13 @@ input[type='radio'] {
 .star-rating-container {
     width: 300px;
     margin: auto;
-    padding: 0;
+    padding: 5px;
 }
 
 .star-rating-list {
     display: flex;
-    font-size: 28px;
-   
+    font-size: 30px;
+    margin: auto;
 }
 
 .star-rating-list li {
@@ -141,12 +150,12 @@ input[type='radio'] {
 }
 
 .star-rating-list li:hover {
-    color: yellow;
+    color: rgb(255, 225, 0);
     cursor: pointer;
 }
 
 .star-rating-list li.active, .star-rating-list li.secondary-active {
-    color: yellow;
+    color: rgb(255, 225, 0);
 }
 
 .post-star-rating-list {
@@ -156,8 +165,8 @@ input[type='radio'] {
 }
 
 .post-star-rating-list li {
-    color: orange;
-    text-shadow: 2px 2px 5px gray;
+    color: rgb(255, 225, 0);
+    text-shadow: 2px 2px 5px rgb(96, 96, 96);
     padding: 2px;
 }
 

@@ -37,7 +37,7 @@ class CityPostForm extends React.Component {
         } else {
             return (
                 <div>
-                    <p>You are not logged in. To write a review, please <Link to='/login'>
+                    <p class='not-logged-in-message'>You are not logged in. To write a review, please <Link to='/login'>
                     log in</Link> or <Link to='/signup'> sign up!</Link>
                     </p>
                 </div>
@@ -105,7 +105,6 @@ class CityPostForm extends React.Component {
         }
     }
 
-   
     render () {
     
         return (
@@ -134,7 +133,7 @@ class CityPostForm extends React.Component {
                             </select>
                                 <br /><br />
                             <label>Rating</label>
-
+                     
                         <div class='star-rating-container'>
                             <ul class='star-rating-list' ref='starList'>
                                 <li onClick={this.setStar('rating')} value='1'><label for='star1'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star1' value='1'/></li>

@@ -44,10 +44,8 @@ input[type='submit'] {
     cursor: pointer;
 }
 
-
 .clearfix {
     clear: both;
-  
 }
 
 .search-bar {
@@ -55,20 +53,17 @@ input[type='submit'] {
     border-radius: 10px;
 }
 
-.nav-bar-flex {
-    display: flex;
-}
-
 .nav-bar-container {
-
     font-size: 24px;
     width: 100%;
+    color: gray; 
     min-height: 40px;
- 
-    color: gray;
-
+    //
+    // z-index: 9999;
+    // background: white;
+    // position: fixed;
+    // top: 0;
 }
-
 
 .left {
     float: left;
@@ -88,7 +83,6 @@ input[type='submit'] {
     float: left;
 }
 
-
 .nav-link {
     color: rgb(108, 154, 238);
     text-decoration: none;
@@ -103,18 +97,14 @@ input[type='submit'] {
     font-size: 20px;
 }
 
-
 .greeting-container {
     background-image: url('CityStreet5.jpg');
     background-size: 100% 100%;
     padding: 100px;
-   
-    // min-height: 300px;
     text-align: center;
     font-size: 40px;
     color: white;
 }
-
 
 .footer {
     text-align: center;

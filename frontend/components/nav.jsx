@@ -25,29 +25,26 @@ import SearchBarContainer from './search_bar';
     
         if (this.props.currentUser) {
             return (
-                <div class="nav-bar-container">
-                    <nav class="nav-bar">
-                        <ul class="nav-bar-list left">
-                            <li> <Link class={'nav-link'} to="/home">Home</Link> </li>
-                            <li> <Link class={'nav-link'} to="/">Greeting</Link> </li>
-                            <li> <SearchBarContainer /> </li>
-                        </ul>
-                        
-                        <ul class="nav-bar-list right">
-                            <li>
-                                <button class={'logout-button'} onClick={this.logout.bind(this)}>Logout</button>
-                            </li>
-                        </ul>
+                    <div class="nav-bar-container">
+                        <nav class="nav-bar">
+                            <ul class="nav-bar-list left">
+                                <li> <Link class={'nav-link'} to="/home">Home</Link> </li>
+                                <li> <Link class={'nav-link'} to="/">Greeting</Link> </li>
+                                <li> <SearchBarContainer /> </li>
+                            </ul>
+                            
+                            <ul class="nav-bar-list right">
+                                <li>
+                                    <button class={'logout-button'} onClick={this.logout.bind(this)}>Logout</button>
+                                </li>
+                            </ul>
 
-                    </nav>
-                    <div class="clearfix"></div>
-                </div>
-                
+                        </nav>
+                        <div class="clearfix"></div>
+                    </div>
             )
         } else {
             return (
-               
-                <div class="nav-bar-flex">
                     <div class="nav-bar-container">
                         <nav class="nav-bar">
 
@@ -65,10 +62,9 @@ import SearchBarContainer from './search_bar';
                                     <Link class={'nav-link'} to="/signup">SignUp</Link>
                                 </li>
                             </ul>
-
                         </nav>
+                        <div class="clearfix"></div>
                     </div>
-                </div>
             )
         }
         //end of render method

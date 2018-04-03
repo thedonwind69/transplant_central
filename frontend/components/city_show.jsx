@@ -39,7 +39,7 @@ class CityShow extends React.Component {
         const { currentCity } = this.props;
       
             return (
-                <div>
+                <div class="city-main-content">
         
                     <div class='city-profile-pic-container'>
                         <div class={`city-profile-pic ${this.profilePicClass()}`}>
