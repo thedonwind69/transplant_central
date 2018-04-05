@@ -18,7 +18,6 @@ class SessionForm extends React.Component {
         this.props.processForm(user);
     }
 
-
     navLink () {
         if (this.props.formType === 'login') {
             return <Link class={'nav-link'} to="/signup">sign up instead</Link>;
@@ -36,7 +35,6 @@ class SessionForm extends React.Component {
     }
 
     render () {
-        
         return (
 
             <div class="session-form-container session-form-background">
@@ -51,7 +49,7 @@ class SessionForm extends React.Component {
 
 
                         <label>Password</label>
-                        <input type='text' value={this.state.password} onChange={this.update('password')}/>
+                        <input type='password' value={this.state.password} onChange={this.update('password')}/>
 
                             <br /><br />
 

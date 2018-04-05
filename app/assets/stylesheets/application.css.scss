@@ -36,7 +36,7 @@ label {
     padding: 7px;
 }
 
-input[type='text'] {
+input[type='text'], input[type='password'] {
     font-size: 20px;
 }
 
@@ -115,6 +115,21 @@ input[type='submit'] {
 
 .hide-this-shit {
     display: none;
+}
+
+.search-container {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.search-list-item {
+    border: 1px solid blue;
+    margin: 0;
+    padding: 0;
+}
+
+.search-list-item:hover {
+  background-color: rgb(242, 242, 242);
 }
 
 @media screen and (max-width: 685px) {

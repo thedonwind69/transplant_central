@@ -61,6 +61,9 @@ class CityPostForm extends React.Component {
             starList.children[i].classList.remove('active');
             starList.children[i].classList.remove('secondary-active');
         }
+        this.setState({
+            rating: null
+        })
     }
 
     submitPost (event) {
@@ -105,8 +108,39 @@ class CityPostForm extends React.Component {
         }
     }
 
+    starHover (event) {
+        event.preventDefault();
+        const starList = ReactDOM.findDOMNode(this.refs.starList);
+        let star = event.currentTarget;
+        const currentStarIndex = this.getFuckingIndex(star);
+        star.classList.remove('active');
+            for (let i=0; i<starList.children.length; i++) {
+                starList.children[i].classList.remove('active');
+                starList.children[i].classList.remove('secondary-active');
+            }
+        star.classList.add('active');
+            for (let j=0; j<currentStarIndex; j++) {
+                starList.children[j].classList.add('secondary-active');
+            }
+    }
+
+    starHoverOut (event) {
+        event.preventDefault();
+        const starList = ReactDOM.findDOMNode(this.refs.starList);
+        let star = event.currentTarget;
+        const currentStarIndex = this.getFuckingIndex(star);
+        star.classList.remove('active');
+            for (let i=0; i<starList.children.length; i++) {
+                starList.children[i].classList.remove('active');
+                starList.children[i].classList.remove('secondary-active');
+            }
+            for (let j=0; j<this.state.rating; j++) {
+                starList.children[j].classList.add('secondary-active');
+            }
+    }
+
     render () {
-    
+        
         return (
             <div>
                 <div>
@@ -133,14 +167,14 @@ class CityPostForm extends React.Component {
                             </select>
                                 <br /><br />
                             <label>Rating</label>
-                     
+
                         <div class='star-rating-container'>
                             <ul class='star-rating-list' ref='starList'>
-                                <li onClick={this.setStar('rating')} value='1'><label for='star1'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star1' value='1'/></li>
-                                <li onClick={this.setStar('rating')} value='2'><label for='star2'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star2' value='2'/></li>
-                                <li onClick={this.setStar('rating')} value='3'><label for='star3'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star3' value='3'/></li>
-                                <li onClick={this.setStar('rating')} value='4'><label for='star4'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star4' value='4'/></li>
-                                <li onClick={this.setStar('rating')} value='5'><label for='star5'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star5' value='5'/></li>
+                                <li onMouseOver={this.starHover.bind(this)} onMouseOut={this.starHoverOut.bind(this)} onClick={this.setStar('rating')} value='1'><label for='star1'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star1' value='1'/></li>
+                                <li onMouseOver={this.starHover.bind(this)} onMouseOut={this.starHoverOut.bind(this)} onClick={this.setStar('rating')} value='2'><label for='star2'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star2' value='2'/></li>
+                                <li onMouseOver={this.starHover.bind(this)} onMouseOut={this.starHoverOut.bind(this)} onClick={this.setStar('rating')} value='3'><label for='star3'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star3' value='3'/></li>
+                                <li onMouseOver={this.starHover.bind(this)} onMouseOut={this.starHoverOut.bind(this)} onClick={this.setStar('rating')} value='4'><label for='star4'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star4' value='4'/></li>
+                                <li onMouseOver={this.starHover.bind(this)} onMouseOut={this.starHoverOut.bind(this)} onClick={this.setStar('rating')} value='5'><label for='star5'></label><i class='fa fa-star' aria-hidden='true'></i><input type='radio' name='rating' id='star5' value='5'/></li>
                             </ul>
                         </div>
 
