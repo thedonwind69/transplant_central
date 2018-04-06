@@ -7,9 +7,12 @@ class SessionForm extends React.Component {
         super(props);
         this.state = {
             username: "",
-            password: ""
+            password: "",
           };
-    
+    }
+
+    componentWillMount () {
+        this.props.errors = [];
     }
 
     handleSubmit (event) {
@@ -34,19 +37,35 @@ class SessionForm extends React.Component {
        } 
     }
 
+    renderErrors() {
+        const localErrors = [];
+        if (this.props.errors.length > 0) {
+            localErrors.push('Wrong Password/Username Bitch');
+        }
+            return(
+                <ul>
+                    {localErrors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                    ))}
+                </ul>
+            );
+    }
+
     render () {
         return (
-
             <div class="session-form-container session-form-background">
                 <div class="session-form">
-                    <h1> {this.props.formType} or {this.navLink()}  </h1>
+                    <h1> {this.props.formType} or {this.navLink()}</h1>
+
+                    {this.renderErrors()}
 
                     <form onSubmit={ this.handleSubmit.bind(this) }>
                         <label>Username</label>
                         <input type='text' value={this.state.username} onChange={this.update('username')} />
 
                             <br /><br />
-
 
                         <label>Password</label>
                         <input type='password' value={this.state.password} onChange={this.update('password')}/>
@@ -60,21 +79,9 @@ class SessionForm extends React.Component {
             </div> 
         )
         
-
-
     }
 
-
-
-
-
-
-
-
 }
-
-
-
 
 
 export default withRouter(SessionForm);

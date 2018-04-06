@@ -10,4 +10,6 @@ class Post < ApplicationRecord
         less_than:    6
       }
 
+    validates :user_id, uniqueness: { scope: [:city_id, :category_id] }
+
 end

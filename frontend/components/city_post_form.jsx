@@ -128,7 +128,6 @@ class CityPostForm extends React.Component {
         event.preventDefault();
         const starList = ReactDOM.findDOMNode(this.refs.starList);
         let star = event.currentTarget;
-        const currentStarIndex = this.getFuckingIndex(star);
         star.classList.remove('active');
             for (let i=0; i<starList.children.length; i++) {
                 starList.children[i].classList.remove('active');
