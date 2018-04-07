@@ -3,6 +3,7 @@ import * as PostAPIUtil from '../util/post_api_util';
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
 export const RECEIVE_POST = 'RECEIVE_POST';
 export const RECEIVE_USER_POSTS = 'RECEIVE_USER_POSTS';
+export const RECEIVE_POST_ERRORS = 'RECEIVE_POST_ERRORS';
 
 export const receivePosts = (posts) => ({
     type: RECEIVE_POSTS,
@@ -13,6 +14,11 @@ export const receivePost = (post) => ({
     type: RECEIVE_POST,
     post: post
 });
+
+export const receivePostErrors = (errors) => ({
+    type: RECEIVE_POST_ERRORS,
+    errors: errors
+})
 
 export const receiveUserPosts = (posts) => ({
     type: RECEIVE_USER_POSTS,
@@ -33,6 +39,10 @@ export const fetchUserPosts = (user_id) => {
 
 export const createPost = (post) => {
     return function (dispatch) {
-        PostAPIUtil.createPost(post).then((created_post) => dispatch(receivePost(created_post)))
+        PostAPIUtil.createPost(post).then( (created_post) => (
+            dispatch(receivePost(created_post))
+        ), err => (
+            dispatch(receivePostErrors('Invalid Post Submission'))
+        ))
     }
 };

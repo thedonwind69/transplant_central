@@ -22,6 +22,10 @@ class CityPostForm extends React.Component {
         }
     }
 
+    componentWillMount () {
+        this.props.postErrors = [];
+    }
+
     formButton () {
         if (this.props.currentUser) {
             return (
@@ -51,6 +55,9 @@ class CityPostForm extends React.Component {
     }
 
     clearForm () {
+        if (this.props.postErrors.length > 0) {
+            this.props.postErrors = [];
+        }
         const postFormReset = ReactDOM.findDOMNode(this.refs.postFormReset);
         postFormReset.reset();
         const postCategory = ReactDOM.findDOMNode(this.refs.postCategory);
@@ -138,6 +145,20 @@ class CityPostForm extends React.Component {
             }
     }
 
+    renderErrors () {
+        if (this.props.postErrors.length > 0) {
+            return (
+                <ul>
+                    {this.props.postErrors.map((error, i) => (
+                    <li class='error-message' key={`error-${i}`}>
+                        {error}
+                    </li>
+                    ))}
+                </ul>
+            );
+        }
+    }
+
     render () {
         
         return (
@@ -181,7 +202,9 @@ class CityPostForm extends React.Component {
                             <br />
                         <textarea id='content' class='post-content' onChange={this.update('content')}></textarea>
                             
-                            <br /><br />
+                            {this.renderErrors()}
+
+                            <br />
                         <input class='post-submit-button' type='submit' value='Submit Post' />
                     </form>
                 </div>

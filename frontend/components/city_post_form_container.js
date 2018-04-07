@@ -6,6 +6,7 @@ import {createPost} from '../actions/post_actions';
 const mapStateToProps = (state) => ({
     currentUser: state.session.currentUser,
     currentCity: state.entities.currentCity,
+    postErrors: state.entities.postErrors
 });
 
 const mapDispatchToProps = (dispatch) => ({

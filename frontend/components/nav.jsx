@@ -30,7 +30,7 @@ import SearchBarContainer from './search_bar';
                             <ul class="nav-bar-list left">
                                 <li> <Link class={'nav-link'} to="/home">Home</Link> </li>
                                 <li> <Link class={'nav-link'} to="/">Greeting</Link> </li>
-                                <li> <SearchBarContainer /> </li>
+                                {/* <li> <SearchBarContainer /> </li> */}
                             </ul>
                             
                             <ul class="nav-bar-list right">
@@ -51,7 +51,7 @@ import SearchBarContainer from './search_bar';
                             <ul class="nav-bar-list left">
                                 <li> <Link class={'nav-link'} to="/home">Home</Link> </li>
                                 <li> <Link class={'nav-link'} to="/">Greeting</Link> </li>
-                                <li> <SearchBarContainer /> </li>
+                                {/* <li> <SearchBarContainer /> </li> */}
                             </ul>
 
                              <ul class="nav-bar-list right">
