@@ -32,7 +32,6 @@ class CategoryIndexItem extends React.Component {
                 class='post-tab' 
                 onClick={changeCategory.bind(this)}
                 id={`${category.id}`}
-                tabIndex={`${category.id}`}
                 >
                 {category.name} {this.categoryRating()}
             </li>

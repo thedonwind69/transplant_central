@@ -69,6 +69,8 @@ class CityPostForm extends React.Component {
             starList.children[i].classList.remove('secondary-active');
         }
         this.setState({
+            subject: null,
+            content: null,
             rating: null
         })
     }
@@ -160,7 +162,6 @@ class CityPostForm extends React.Component {
     }
 
     render () {
-        
         return (
             <div>
                 <div>

@@ -23,12 +23,14 @@
 }
 
 .post-tab:hover {
-    background: rgb(242, 140, 140);
+    padding: 14px;
+    background: rgb(41, 169, 238);
     cursor: pointer;
 }
 
-.post-tab:focus {
-    background: rgb(242, 140, 140);
+.highlight-category {
+    border: 1px solid white;
+    background: rgb(41, 169, 238);
 }
 
 .city-post-form-button {

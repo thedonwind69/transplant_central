@@ -7,7 +7,7 @@ import {
     HashRouter,
     withRouter
   } from 'react-router-dom';
-
+import ReactDOM from 'react-dom';
 import PostIndexItem from './post_index_item';
 import CategoryIndexItem from './category_index_item';
 
@@ -34,6 +34,12 @@ class PostsDisplay extends React.Component {
 
     changeCategory (event) {
         event.preventDefault();
+        const currentCategory = event.currentTarget;
+        const categoryList = ReactDOM.findDOMNode(this.refs.categoryList);
+        for (let i=0; i<categoryList.children.length; i++) {
+            categoryList.children[i].classList.remove('highlight-category');
+        }
+        currentCategory.classList.add('highlight-category');
         this.setState({
             currentCategory: event.currentTarget.innerHTML,
             currentCategoryId: event.currentTarget.getAttribute('id')
@@ -72,7 +78,6 @@ class PostsDisplay extends React.Component {
     }
 
     render () {
-       
         return (
             <div>
 
@@ -81,7 +86,7 @@ class PostsDisplay extends React.Component {
                 </div>
 
                 <div class='post-tabs'>
-                    <ul>
+                    <ul ref='categoryList'>
                         {this.all_categories()}
                     </ul>    
                 </div>
