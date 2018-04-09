@@ -22,13 +22,13 @@ ul {
 }
 
 body {
-    font-family: 'Didact Gothic';
+    font-family: Questrial;
     background: rgb(255, 255, 255);
     margin: 0;
 }
 
 button {
-    font-family: 'Didact Gothic';
+    font-family: Questrial;
     font-size: 20px;
     cursor: pointer;
 }
@@ -54,7 +54,7 @@ input[type='submit'] {
 }
 
 .search-bar {
-    font-family: 'Didact Gothic';
+    font-family: Questrial;
     border-radius: 10px;
 }
 
@@ -137,10 +137,8 @@ input[type='submit'] {
   background-color: rgb(242, 242, 242);
 }
 
-@media screen and (max-width: 685px) {
+@media screen and (max-width: 775px) {
     .greeting-container {
-        background-image: url('CityStreet5.jpg');
-        background-size: 100% 100%;
         padding: 75px;
         min-height: 100px;
         font-size: 18px;

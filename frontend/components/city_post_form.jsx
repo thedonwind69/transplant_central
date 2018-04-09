@@ -161,6 +161,11 @@ class CityPostForm extends React.Component {
         }
     }
 
+    profilePicClass () {
+        const { currentCity } = this.props;
+        return currentCity.name.split(' ').join('') + "Page"
+    }
+
     render () {
         return (
             <div>
@@ -170,7 +175,7 @@ class CityPostForm extends React.Component {
 
                 <br />
 
-                <div ref='postForm' class="post-form-container hide-this-shit">
+                <div ref='postForm' class={`post-form-container hide-this-shit`}>
                     <form ref="postFormReset" onSubmit={this.submitPost.bind(this)}>
                         <label for='subject' >Subject</label>
                             <br />

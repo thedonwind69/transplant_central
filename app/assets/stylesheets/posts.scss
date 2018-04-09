@@ -23,14 +23,27 @@
 }
 
 .post-tab:hover {
-    background: rgb(0, 89, 167);
+    background: rgb(222, 110, 110);
     cursor: pointer;
 }
 
 .highlight-category {
-    border: 1px solid white;
-    border-radius: 0px 0px 20px;
-    background: rgb(0, 89, 167);
+    position: relative;
+    background: rgb(222, 110, 110);
+}
+
+.highlight-category:after {
+    content: ' ';
+    width: 0px;
+    height: 0px;
+    border-left: 12px solid transparent;
+    border-top: 12px solid rgb(222, 110, 110);
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    margin-left: -10px;
 }
 
 .city-post-form-button {
@@ -71,9 +84,12 @@
 }
 
 .post-form-container {
-    background: #f9f9f9;
-    border-radius: 10px;
-    padding: 7px;
+    // background: #f9f9f9;
+    color: white;
+    margin-bottom: 5px;
+    padding: 4px;
+    background-image: url('CityStreet2.jpg');
+    background-size: 100% 100%;
     text-align: center;
 }
 
@@ -112,19 +128,12 @@
     font-size: 17px;
 }
 
-.total-rating {
-    display: inline-block;
-    padding: 0px;
+.total-rating-container h1 {
+
+    color: rgb(52, 52, 52);
     margin-left: 5px;
-    font-size: 21px;
-}
-
-.total-rating h1 {
+    font-size: 40px;
     margin: 0;
-}
-
-.total-rating-container {
-    color: rgb(255, 174, 0);
 }
 
 .total-star-rating-list {
@@ -135,15 +144,15 @@
 }
 
 .total-star-rating-list li {
-    color: white;
-    text-shadow: 4px 4px 4px rgb(255, 247, 0);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgb(24, 24, 24);
     padding: 5px;
     margin-left: 3px;
     margin-right: 3px;
 }
 
 .total-rating-star-circle {
-    background-color: orange;
+    background-color: rgb(255, 211, 66);
     border-radius: 50%;
     width: 32px;
     height: 32px;

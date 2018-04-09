@@ -88,12 +88,10 @@ class PostsDisplay extends React.Component {
         return (
             <div>
 
-                <div class="total-rating">
-                    <div class='total-rating-container'>
-                        {this.totalRating()}
-                    </div>
+                <div class='total-rating-container'>
+                    {this.totalRating()}
                 </div>
-                    
+              
                 <div class='post-tabs'>
                     <ul ref='categoryList'>
                         {this.all_categories()}

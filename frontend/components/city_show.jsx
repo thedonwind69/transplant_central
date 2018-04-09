@@ -50,7 +50,7 @@ class CityShow extends React.Component {
                     <br />
 
                     <div>
-                        <CityPostFormContainer />
+                        <CityPostFormContainer currentCity={currentCity} />
                     </div>
 
                     <PostsDisplayContainer />
