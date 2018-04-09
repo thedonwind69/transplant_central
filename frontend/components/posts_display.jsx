@@ -10,6 +10,7 @@ import {
 import ReactDOM from 'react-dom';
 import PostIndexItem from './post_index_item';
 import CategoryIndexItem from './category_index_item';
+import TotalRatingStars from './total_rating_stars';
 
 class PostsDisplay extends React.Component {
     constructor(props) {
@@ -19,16 +20,16 @@ class PostsDisplay extends React.Component {
             currentCategoryId: null
         }
     }
-    
+
     componentDidMount () {
         this.props.fetchCategories();
         this.props.fetchPosts(this.props.match.params.city_id);
     }
 
-    componentWillReceiveProps (newProps) {
-        const { fetchPosts} = this.props;
-        if (newProps.match.params.city_id !== this.props.match.params.city_id) {
-            fetchPosts(newProps.match.params.city_id);
+    componentWillReceiveProps (nextProps) {
+        const {fetchPosts, allPosts} = nextProps;
+        if (nextProps.match.params.city_id !== this.props.match.params.city_id) {
+            fetchPosts(nextProps.match.params.city_id);
         }
     }
 
@@ -72,8 +73,14 @@ class PostsDisplay extends React.Component {
             overallRating += post.rating;
         })
         const finalRating = (overallRating / allPosts.length).toFixed(1);
+        const finalRatingFloored = Math.floor(overallRating / allPosts.length);
         if (overallRating / allPosts.length > 0) {
-            return <h1>{finalRating} Stars</h1>
+            return (
+                <div>
+                    <TotalRatingStars totalRating={finalRatingFloored} />
+                    <h1>{finalRating} Stars</h1>
+                </div>
+            )
         }
     }
 
@@ -82,9 +89,11 @@ class PostsDisplay extends React.Component {
             <div>
 
                 <div class="total-rating">
-                    {this.totalRating()}
+                    <div class='total-rating-container'>
+                        {this.totalRating()}
+                    </div>
                 </div>
-
+                    
                 <div class='post-tabs'>
                     <ul ref='categoryList'>
                         {this.all_categories()}
