@@ -11,7 +11,6 @@ const entitiesReducer = combineReducers({
     categories: categoriesReducer,
     posts: postsReducer,
     users: usersReducer,
-    postErrors: postErrorsReducer,
 })
 
 export default entitiesReducer;

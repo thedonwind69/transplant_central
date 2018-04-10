@@ -134,7 +134,43 @@
     background-repeat: no-repeat;
     padding: 0;
     margin: 0;
-    opacity: 0.9;
+    animation: fadein 1.2s;
+    -moz-animation: fadein 1.2s; /* Firefox */
+    -webkit-animation: fadein 1.2s; /* Safari and Chrome */
+    -o-animation: fadein 1.2s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:0.9;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:0.9;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:0.9;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 0.9;
+    }
 }
 
 .home-page-container {
@@ -150,6 +186,43 @@
     opacity: 0.80;
     margin: 2px;
     background-size: 100% 100%;
+    animation: cityfadein 0.8s;
+    -moz-animation: cityfadein 0.8s; /* Firefox */
+    -webkit-animation: cityfadein 0.8s; /* Safari and Chrome */
+    -o-animation: cityfadein 0.8s; /* Opera */
+}
+
+@keyframes cityfadein {
+    from {
+        opacity:0.6;
+    }
+    to {
+        opacity:0.8;
+    }
+}
+@-moz-keyframes cityfadein { /* Firefox */
+    from {
+        opacity:0.6;
+    }
+    to {
+        opacity:0.8;
+    }
+}
+@-webkit-keyframes cityfadein { /* Safari and Chrome */
+    from {
+        opacity:0.6;
+    }
+    to {
+        opacity:0.8;
+    }
+}
+@-o-keyframes cityfadein { /* Opera */
+    from {
+        opacity:0.6;
+    }
+    to {
+        opacity: 0.8;
+    }
 }
 
 .city-item:hover {
@@ -168,6 +241,8 @@
     margin: 0;
     padding: 200px;
 }
+
+//--------> Media Screens
 
 @media screen and (max-width: 1000px) {
     .city-item {
@@ -209,5 +284,12 @@
     .city-profile-header2 {
         font-size: 50px;
         padding: 75px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .city-profile-header2 {
+        font-size: 35px;
+        padding: 50px;
     }
 }

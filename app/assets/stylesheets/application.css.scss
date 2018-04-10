@@ -43,6 +43,7 @@ input[type='text'], input[type='password'] {
 
 input[type='submit'] {
     cursor: pointer;
+    text-shadow: 2px 2px 2px rgb(75, 75, 75);
 }
 
 .clearfix {
@@ -63,11 +64,6 @@ input[type='submit'] {
     width: 100%;
     color: gray; 
     min-height: 40px;
-    //
-    // z-index: 9999;
-    // background: white;
-    // position: fixed;
-    // top: 0;
 }
 
 .left {
@@ -79,7 +75,6 @@ input[type='submit'] {
 }
 
 .nav-bar-list {
-    margin: 0;
     padding: 0;
 }
 
@@ -89,13 +84,20 @@ input[type='submit'] {
 }
 
 .nav-link {
+    padding: 7px;
     color: rgb(108, 154, 238);
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.nav-link-hover:hover {
+    background-color: rgb(108, 154, 238);
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
-.nav-link:hover {
-    color: rgb(247, 145, 145);
-    text-decoration: none;
+.session-link-hover:hover {
+    color: rgb(174, 206, 255);
 }
 
 .greeting-logged-in {
@@ -109,6 +111,43 @@ input[type='submit'] {
     text-align: center;
     font-size: 40px;
     color: white;
+    animation: fadein 1.2s;
+    -moz-animation: fadein 1.2s; /* Firefox */
+    -webkit-animation: fadein 1.2s; /* Safari and Chrome */
+    -o-animation: fadein 1.2s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 
 .footer {

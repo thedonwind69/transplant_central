@@ -42,7 +42,7 @@ export const createPost = (post) => {
         PostAPIUtil.createPost(post).then( (created_post) => (
             dispatch(receivePost(created_post))
         ), err => (
-            dispatch(receivePostErrors('Invalid Post Submission'))
+            dispatch(receivePostErrors(err.responseJSON))
         ))
     }
 };

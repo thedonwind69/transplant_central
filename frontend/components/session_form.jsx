@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom'
 
@@ -23,9 +22,9 @@ class SessionForm extends React.Component {
 
     navLink () {
         if (this.props.formType === 'login') {
-            return <Link class={'nav-link'} to="/signup">sign up instead</Link>;
+            return <Link class={'nav-link session-link-hover'} to="/signup">sign up instead</Link>;
           } else {
-            return <Link class={'nav-link'} to="/login">log in instead</Link>;
+            return <Link class={'nav-link session-link-hover'} to="/login">log in instead</Link>;
           }
     }
 
@@ -42,14 +41,16 @@ class SessionForm extends React.Component {
         if (this.props.errors.length > 0) {
             localErrors.push('Wrong Password/Username');
         }
-            return(
+            return (
                 <ul>
                     {localErrors.map((error, i) => (
                     <li class='error-message' key={`error-${i}`}>
                         {error}
                     </li>
-                    ))}
+                    ))} 
+                    <br />
                 </ul>
+               
             );
     }
 
@@ -82,6 +83,5 @@ class SessionForm extends React.Component {
     }
 
 }
-
 
 export default withRouter(SessionForm);

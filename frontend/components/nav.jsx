@@ -28,8 +28,8 @@ import SearchBarContainer from './search_bar';
                     <div class="nav-bar-container">
                         <nav class="nav-bar">
                             <ul class="nav-bar-list left">
-                                <li> <Link class={'nav-link'} to="/home">Home</Link> </li>
-                                <li> <Link class={'nav-link'} to="/">Greeting</Link> </li>
+                                <li> <Link class={'nav-link nav-link-hover'} to="/home">Home</Link> </li>
+                                <li> <Link class={'nav-link nav-link-hover'} to="/">Greeting</Link> </li>
                                 {/* <li> <SearchBarContainer /> </li> */}
                             </ul>
                             
@@ -49,17 +49,17 @@ import SearchBarContainer from './search_bar';
                         <nav class="nav-bar">
 
                             <ul class="nav-bar-list left">
-                                <li> <Link class={'nav-link'} to="/home">Home</Link> </li>
-                                <li> <Link class={'nav-link'} to="/">Greeting</Link> </li>
+                                <li> <Link class={'nav-link nav-link-hover'} to="/home">Home</Link> </li>
+                                <li> <Link class={'nav-link nav-link-hover'} to="/">Greeting</Link> </li>
                                 {/* <li> <SearchBarContainer /> </li> */}
                             </ul>
 
                              <ul class="nav-bar-list right">
                                 <li>
-                                    <Link class={'nav-link'} to="/login">LogIn</Link>
+                                    <Link class={'nav-link nav-link-hover'} to="/login">LogIn</Link>
                                 </li>
                                 <li>
-                                    <Link class={'nav-link'} to="/signup">SignUp</Link>
+                                    <Link class={'nav-link nav-link-hover'} to="/signup">SignUp</Link>
                                 </li>
                             </ul>
                         </nav>

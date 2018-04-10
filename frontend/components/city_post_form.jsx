@@ -26,6 +26,12 @@ class CityPostForm extends React.Component {
         this.props.postErrors = [];
     }
 
+    componentWillReceiveProps (nextProps) {
+        if (nextProps !== this.props) {
+            this.props.postErrors = [];
+        }
+    }
+
     formButton () {
         if (this.props.currentUser) {
             return (
@@ -61,7 +67,6 @@ class CityPostForm extends React.Component {
         const postFormReset = ReactDOM.findDOMNode(this.refs.postFormReset);
         postFormReset.reset();
         const postCategory = ReactDOM.findDOMNode(this.refs.postCategory);
-        const postRating = ReactDOM.findDOMNode(this.refs.postRating);
         const starList = ReactDOM.findDOMNode(this.refs.starList);
         postCategory.selectedIndex = 0;
         for (let i=0; i<starList.children.length; i++) {
@@ -148,17 +153,19 @@ class CityPostForm extends React.Component {
     }
 
     renderErrors () {
+        const localErrors = [];
         if (this.props.postErrors.length > 0) {
-            return (
-                <ul>
-                    {this.props.postErrors.map((error, i) => (
-                    <li class='error-message' key={`error-${i}`}>
-                        {error}
-                    </li>
-                    ))}
-                </ul>
-            );
-        }
+            localErrors.push('Invalid Post Submission');
+        }    
+        return (
+            <ul>
+                {localErrors.map((error, i) => (
+                <li class='error-message' key={`error-${i}`}>
+                    {error}
+                </li>
+                ))}
+            </ul>
+        );
     }
 
     profilePicClass () {
@@ -208,7 +215,7 @@ class CityPostForm extends React.Component {
                             <br />
                         <textarea id='content' class='post-content' onChange={this.update('content')}></textarea>
                             
-                            {this.renderErrors()}
+                            {/* {this.renderErrors()} */}
 
                             <br />
                         <input class='post-submit-button' type='submit' value='Submit Post' />
