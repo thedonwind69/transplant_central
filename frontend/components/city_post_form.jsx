@@ -32,6 +32,10 @@ class CityPostForm extends React.Component {
         }
     }
 
+    componentWillUnmount () {
+        this.props.resetPostErrors();
+    }
+
     formButton () {
         if (this.props.currentUser) {
             return (
@@ -61,9 +65,6 @@ class CityPostForm extends React.Component {
     }
 
     clearForm () {
-        if (this.props.postErrors.length > 0) {
-            this.props.postErrors = [];
-        }
         const postFormReset = ReactDOM.findDOMNode(this.refs.postFormReset);
         postFormReset.reset();
         const postCategory = ReactDOM.findDOMNode(this.refs.postCategory);
@@ -76,7 +77,8 @@ class CityPostForm extends React.Component {
         this.setState({
             subject: null,
             content: null,
-            rating: null
+            rating: null,
+            category_id: null
         })
     }
 
@@ -84,6 +86,7 @@ class CityPostForm extends React.Component {
         event.preventDefault();
         const createdPost = Object.assign({}, this.state);
         this.props.createPost(createdPost);
+        this.props.resetPostErrors();
         this.clearForm();
     }
 
@@ -152,20 +155,18 @@ class CityPostForm extends React.Component {
             }
     }
 
-    renderErrors () {
-        const localErrors = [];
+    renderErrors () {  
         if (this.props.postErrors.length > 0) {
-            localErrors.push('Invalid Post Submission');
-        }    
-        return (
-            <ul>
-                {localErrors.map((error, i) => (
-                <li class='error-message' key={`error-${i}`}>
-                    {error}
-                </li>
-                ))}
-            </ul>
-        );
+            return (
+                <ul>
+                    {this.props.postErrors.map((error, i) => (
+                    <li class='post-error-message' key={`error-${i}`}>
+                        {error}
+                    </li>
+                    ))}
+                </ul>
+            );
+        }
     }
 
     profilePicClass () {
@@ -215,7 +216,7 @@ class CityPostForm extends React.Component {
                             <br />
                         <textarea id='content' class='post-content' onChange={this.update('content')}></textarea>
                             
-                            {/* {this.renderErrors()} */}
+                            {this.renderErrors()}
 
                             <br />
                         <input class='post-submit-button' type='submit' value='Submit Post' />

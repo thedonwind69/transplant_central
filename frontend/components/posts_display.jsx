@@ -33,6 +33,10 @@ class PostsDisplay extends React.Component {
         }
     }
 
+    componentWillUnmount () {
+        this.props.resetPosts();
+    }
+
     changeCategory (event) {
         event.preventDefault();
         const currentCategory = event.currentTarget;
@@ -84,14 +88,24 @@ class PostsDisplay extends React.Component {
         }
     }
 
+    numberOfReviews () {
+        const {allPosts} = this.props;
+        return (
+            <p class='number-of-reviews'>{allPosts.length} Reviews</p>
+        )
+    }
+
     render () {
         return (
             <div>
 
                 <div class='total-rating-container'>
                     {this.totalRating()}
+                    {this.numberOfReviews()}
                 </div>
-              
+
+                <div class='clearfix'></div>
+
                 <div class='post-tabs'>
                     <ul ref='categoryList'>
                         {this.all_categories()}
@@ -106,11 +120,6 @@ class PostsDisplay extends React.Component {
         )
     }
 
-}
-
-PostsDisplay.defaultProps = {
-    allPosts: null,
-    categories: null
 }
 
 export default withRouter(PostsDisplay);

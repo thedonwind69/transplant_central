@@ -30,6 +30,13 @@ class PostIndexItem extends React.Component {
             postRatingList.children[i].classList.add('fa-star');
         }
     }
+
+    timeStamp () {
+        const {post} = this.props;
+        const monthDay = post.created_at.toString().slice(5, 10);
+        const year = post.created_at.toString().slice(0, 4);
+        return monthDay + '-' + year;
+    }
    
     render () {
 
@@ -37,7 +44,7 @@ class PostIndexItem extends React.Component {
 
         return (
                 <div class='post-index-item'>
-                    <p class='post-stamp'>Posted: {post.created_at}</p>
+                    <p class='post-stamp'>Posted: {this.timeStamp()}</p>
                     <p class='post-stamp'>Posted By: {this.userShowLink()}</p>
 
                     <ul class='post-star-rating-list' ref='postRating'>

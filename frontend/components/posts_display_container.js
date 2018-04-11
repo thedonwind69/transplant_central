@@ -1,10 +1,8 @@
 import {connect} from 'react-redux';
 import PostsDisplay from './posts_display';
 import {fetchCity} from '../actions/city_actions';
-
 import {fetchCategories} from '../actions/category_actions';
-
-import {fetchPosts} from '../actions/post_actions';
+import {fetchPosts, resetPosts} from '../actions/post_actions';
 
 const mapStateToProps = (state, ownProps) => ({
     currentUser: state.session.currentUser,
@@ -14,7 +12,8 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch) => ({
     fetchCategories: () => dispatch(fetchCategories()),
-    fetchPosts: (city_id) => dispatch(fetchPosts(city_id))
+    fetchPosts: (city_id) => dispatch(fetchPosts(city_id)),
+    resetPosts: () => dispatch(resetPosts())
 });
 
 const PostFormContainer = connect(mapStateToProps, mapDispatchToProps)(PostsDisplay);

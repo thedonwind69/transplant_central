@@ -84,12 +84,18 @@
 }
 
 .post-form-container {
-    color: white;
+    color: rgb(0, 0, 0);
     margin-bottom: 5px;
     padding: 4px;
-    background-image: url('BrickWall.jpg');
+    background-image: url('WhiteGradient.jpg');
     background-size: 100% 100%;
     text-align: center;
+}
+
+.post-error-message {
+    font-size: 18px;
+    margin: auto;
+    color: rgb(255, 42, 42);
 }
 
 .post-category-dropdown {
@@ -127,9 +133,12 @@
     font-size: 17px;
 }
 
-.total-rating-container h1 {
+.total-rating-container {
+    margin-left: 2px;
+}
 
-    color: rgb(52, 52, 52);
+.total-rating-container h1 {
+    color: rgb(255, 174, 0);
     margin-left: 5px;
     font-size: 40px;
     margin: 0;
@@ -161,6 +170,13 @@
     margin: 0;
     margin-left: 5px;
 }
+
+.number-of-reviews {
+    font-size: 18px;
+    margin: 0px;
+}
+
+//---post form styles
 
 input[type='radio'] {
     display: none;
@@ -208,6 +224,17 @@ input[type='radio'] {
 
     .post-tabs ul {
         display: block;
+    }
+
+    .total-star-rating-list {
+        font-size: 25px;
+    }
+
+    .total-rating-star-circle {
+        background-color: rgb(255, 211, 66);
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
     }
 
 }

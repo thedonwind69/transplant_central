@@ -1,9 +1,10 @@
 import * as PostAPIUtil from '../util/post_api_util';
-
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
 export const RECEIVE_POST = 'RECEIVE_POST';
 export const RECEIVE_USER_POSTS = 'RECEIVE_USER_POSTS';
 export const RECEIVE_POST_ERRORS = 'RECEIVE_POST_ERRORS';
+export const RESET_POSTS = 'RESET_POSTS';
+export const RESET_POST_ERRORS = 'RESET_POST_ERRORS';
 
 export const receivePosts = (posts) => ({
     type: RECEIVE_POSTS,
@@ -15,9 +16,17 @@ export const receivePost = (post) => ({
     post: post
 });
 
+export const resetPosts = () => ({
+    type: RESET_POSTS,
+})
+
 export const receivePostErrors = (errors) => ({
     type: RECEIVE_POST_ERRORS,
     errors: errors
+})
+
+export const resetPostErrors = () => ({
+    type: RESET_POST_ERRORS
 })
 
 export const receiveUserPosts = (posts) => ({

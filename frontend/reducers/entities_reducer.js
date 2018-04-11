@@ -10,6 +10,7 @@ const entitiesReducer = combineReducers({
     cities: citiesReducer,
     categories: categoriesReducer,
     posts: postsReducer,
+    postErrors: postErrorsReducer,
     users: usersReducer,
 })
 

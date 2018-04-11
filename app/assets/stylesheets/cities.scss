@@ -194,7 +194,7 @@
 
 @keyframes cityfadein {
     from {
-        opacity:0.6;
+        opacity:0.7;
     }
     to {
         opacity:0.8;
@@ -202,7 +202,7 @@
 }
 @-moz-keyframes cityfadein { /* Firefox */
     from {
-        opacity:0.6;
+        opacity:0.7;
     }
     to {
         opacity:0.8;
@@ -210,7 +210,7 @@
 }
 @-webkit-keyframes cityfadein { /* Safari and Chrome */
     from {
-        opacity:0.6;
+        opacity:0.7;
     }
     to {
         opacity:0.8;
@@ -218,7 +218,7 @@
 }
 @-o-keyframes cityfadein { /* Opera */
     from {
-        opacity:0.6;
+        opacity:0.7;
     }
     to {
         opacity: 0.8;
@@ -242,7 +242,7 @@
     padding: 200px;
 }
 
-//--------> Media Screens
+//--------> Media Queries
 
 @media screen and (max-width: 1000px) {
     .city-item {
