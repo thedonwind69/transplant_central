@@ -90,9 +90,13 @@ class PostsDisplay extends React.Component {
 
     numberOfReviews () {
         const {allPosts} = this.props;
-        return (
-            <p class='number-of-reviews'>{allPosts.length} Reviews</p>
-        )
+        if (allPosts.length > 1) {
+            return <p class='number-of-reviews'>{allPosts.length} Reviews</p>
+        } else if (allPosts.length === 1) {
+            return <p class='number-of-reviews'>{allPosts.length} Review</p>
+        } else {
+            return <p class='number-of-reviews'>No Reviews</p>
+        }
     }
 
     render () {
