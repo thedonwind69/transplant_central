@@ -44,7 +44,7 @@ class PostIndexItem extends React.Component {
 
         return (
                 <div class='post-index-item'>
-                    <p class='post-stamp'>Posted: {this.timeStamp()}</p>
+                    <p class='post-stamp'>{this.timeStamp()}</p>
                     <p class='post-stamp'>Posted By: {this.userShowLink()}</p>
 
                     <ul class='post-star-rating-list' ref='postRating'>
