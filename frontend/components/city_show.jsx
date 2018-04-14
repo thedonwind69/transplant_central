@@ -62,6 +62,12 @@ class CityShow extends React.Component {
         }
     }
 
+    displayButton (event) {
+        event.preventDefault();
+        const button = event.currentTarget;
+        // button.classList.toggle('hide-this-shit');
+    }
+
     render () {  
         const { currentCity } = this.props;
       
@@ -71,8 +77,23 @@ class CityShow extends React.Component {
                     <div class='city-profile-pic-container'>
                         <div ref='cityPic' class={`city-profile-pic ${this.profilePicClass()}`}>
                             <h1 class='city-profile-header2'>{currentCity.name}</h1>
-                            <i onClick={this.changePicLeft.bind(this)} class="left city-pic-button city-pic-button-left">{`<`}</i>
-                            <i onClick={this.changePicRight.bind(this)} class="right city-pic-button city-pic-button-right">{`>`}</i>
+
+                            <i 
+                            onMouseOver={this.displayButton.bind(this)} 
+                            onClick={this.changePicRight.bind(this)} 
+                            class="city-pic-button city-pic-button-right"
+                            >
+                            {`>`}
+                            </i>
+
+                            <i 
+                            onMouseOver={this.displayButton.bind(this)} 
+                            onClick={this.changePicLeft.bind(this)} 
+                            class="city-pic-button city-pic-button-left"
+                            >
+                            {`<`}
+                            </i>
+
                             <div class='clearfix'></div>
                         </div>
                     </div>
@@ -96,7 +117,5 @@ CityShow.defaultProps = {
         name: ''
     },
 }
-
-
 
 export default withRouter(CityShow);

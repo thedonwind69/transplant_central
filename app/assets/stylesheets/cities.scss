@@ -358,32 +358,43 @@
 }
 
 .city-profile-header2 {
-    position: relative;
-    top: 20px;
     font-size: 120px;
     color: rgb(255, 255, 255);
     text-align: center;
     margin: 0;
-    padding: 200px;
+    padding: 190px;
 }
 
 .city-pic-button {
-    margin: auto;
+    margin: 0;
     padding: 0;
-    font-size: 50px;
-    color: white;
+    font-size: 70px;
+    color: transparent;
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    opacity: 0.8;
 }
 
 .city-pic-button:hover {
-    color: rgb(129, 187, 254);
+    color: rgb(255, 255, 255);
     cursor: pointer;
+    background: rgb(18, 18, 18);
+    border-radius: 50%;
 }
+
 .city-pic-button-left {
     margin-left: 10px;
+    position: absolute;
+    top: 45%;
+    left: 0%;
 }
 
 .city-pic-button-right {
     margin-right: 10px;
+    position: absolute;
+    top: 45%;
+    right: 0%;
 }
 //--------> Media Queries
 @media screen and (max-width: 1000px) {
@@ -392,7 +403,6 @@
         height: 140px;
     }
 }
-
 @media screen and (max-width: 900px) {
     .city-item {
         width: 360px;
@@ -403,14 +413,12 @@
         display: inline-block;
     }
 }
-
 @media screen and (max-width: 875px) {
     .city-profile-header2 {
         font-size: 70px;
         padding: 100px;
     }
 }
-
 @media screen and (max-width: 750px) {
     .city-item {
         width: 370px;
@@ -421,14 +429,17 @@
         display: block;        
     }
 }
-
 @media screen and (max-width: 550px) {
     .city-profile-header2 {
         font-size: 50px;
         padding: 75px;
     }
+    .city-pic-button {
+        font-size: 45px;
+        width: 45px;
+        height: 45px;
+    }
 }
-
 @media screen and (max-width: 350px) {
     .city-profile-header2 {
         font-size: 35px;
