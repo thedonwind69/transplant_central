@@ -1,17 +1,14 @@
 class Api::PostsController < ApplicationController
 
     def index
-        if @city = City.find(params[:city_id])
-          @all_posts = @city.posts
-          render :index
-        elsif  @user = User.find(params[:user_id])
-          @all_posts = @user.posts
-          render :index
-        end
+        @city = City.find(params[:city_id])
+        @all_posts = @city.posts
+        render :index
     end
 
     def create
       @post = Post.create(post_params)
+      @post_user
       if @post.save
         render :show
       else

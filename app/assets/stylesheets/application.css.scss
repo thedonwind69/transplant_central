@@ -110,7 +110,7 @@ input[type='submit'] {
 .greeting-container {
     background-image: url('CityStreet5.jpg');
     background-size: 100% 100%;
-    padding: 130px;
+    padding: 100px;
     text-align: center;
     font-size: 40px;
     color: white;
@@ -179,10 +179,48 @@ input[type='submit'] {
   background-color: rgb(242, 242, 242);
 }
 
+.city-highlights {
+    text-align: center;
+    color: rgb(19, 21, 97);
+    margin: 0;
+    padding: 10px;
+}
+.highlights-container {
+    text-align: center;
+    margin: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.highlights-container h1 {
+    color: rgb(24, 26, 87);
+    margin: 0;
+    font-size: 22px;
+}
+.single-highlight {
+    display: inline-block;
+    border: 2px solid white;
+    margin: 2px;
+    padding: 0;
+    border-radius: 15px;
+    width: 170px;
+    height: 170px;
+    background-size: 100% 100%;
+    opacity: 0.85;
+}
+.single-highlight:hover {
+    opacity:1;
+    border:2px solid black;
+}
+//-media queries
 @media screen and (max-width: 815px) {
     .greeting-container {
         padding: 85px;
         font-size: 20px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .highlights-container {
+        display: block;
     }
 }
 @media screen and (max-width: 480px) {

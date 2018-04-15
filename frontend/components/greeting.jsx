@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import {
     Route,
     Redirect,
@@ -8,10 +6,13 @@ import {
     Link,
     HashRouter
   } from 'react-router-dom';
-
+import HighlightsContainer from './highlights_container';
 
 class Greeting extends React.Component {
 
+    constructor(props) {
+        super(props);
+    }
 
     currentUserHeading () {
         if (this.props.currentUser) {
@@ -20,21 +21,20 @@ class Greeting extends React.Component {
     }
 
     render () {
-
+ 
         return (
             <div>
                 {this.currentUserHeading()}
-
                 <div className="greeting-container">
                     <h1>Welcome to TransplantCentral</h1>
                     <p>Where you can review your favorite city</p>
                 </div>
-
+            
+            <HighlightsContainer />
+           
             </div>
         )
     }
-
-
 
 }
 

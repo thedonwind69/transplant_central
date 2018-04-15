@@ -18,7 +18,7 @@ class PostIndexItem extends React.Component {
     userShowLink () {
         const {post} = this.props;
         return (
-            <Link to={`/users/${post.user_id}`}>{post.user_id}</Link>
+            <Link to={`/users/${post.user_id}`}>{post.username}</Link>
         )
     }
 
