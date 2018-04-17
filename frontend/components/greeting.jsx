@@ -21,7 +21,6 @@ class Greeting extends React.Component {
     }
 
     render () {
- 
         return (
             <div>
                 {this.currentUserHeading()}
@@ -29,13 +28,10 @@ class Greeting extends React.Component {
                     <h1>Welcome to TransplantCentral</h1>
                     <p>Where you can review your favorite city</p>
                 </div>
-            
             <HighlightsContainer />
-           
             </div>
         )
     }
-
 }
 
 export default Greeting;

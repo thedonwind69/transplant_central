@@ -20,27 +20,22 @@ ul {
     list-style: none;
     margin: 0;
 }
-
 body {
     font-family: Questrial;
     background: rgb(255, 255, 255);
     margin: 0;
 }
-
 button {
     font-family: Questrial;
     font-size: 20px;
     cursor: pointer;
 }
-
 label {
     padding: 7px;
 }
-
 input[type='text'], input[type='password'] {
     font-size: 20px;
 }
-
 input[type='submit'] {
     cursor: pointer;
     text-shadow: 2px 2px 2px rgb(75, 75, 75);
@@ -49,16 +44,13 @@ input[type='submit'] {
 .clearfix {
     clear: both;
 }
-
 .error-message {
     color: rgb(245, 58, 58);
 }
-
 .search-bar {
     font-family: Questrial;
     border-radius: 10px;
 }
-
 .nav-bar-container {
     position: relative;
     font-size: 24px;
@@ -70,7 +62,6 @@ input[type='submit'] {
 .left {
     float: left;
 }
-
 .right {
     float: right;
 }
@@ -78,12 +69,10 @@ input[type='submit'] {
 .nav-bar-list {
     padding: 0;
 }
-
 .nav-bar-list li {
     padding: 15px;
     float: left;
 }
-
 .nav-link {
     margin: 0;
     padding: 7px;
@@ -91,22 +80,18 @@ input[type='submit'] {
     text-decoration: none;
     border-radius: 25px;
 }
-
 .nav-link-hover:hover {
     background-color: rgb(108, 154, 238);
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
-
 .session-link-hover:hover {
     color: rgb(174, 206, 255);
 }
-
 .greeting-logged-in {
     margin-left: 5px;
     font-size: 20px;
 }
-
 .greeting-container {
     background-image: url('CityStreet5.jpg');
     background-size: 100% 100%;
@@ -119,7 +104,7 @@ input[type='submit'] {
     -webkit-animation: fadein 1.2s; /* Safari and Chrome */
     -o-animation: fadein 1.2s; /* Opera */
 }
-
+//--fade effect start
 @keyframes fadein {
     from {
         opacity:0;
@@ -152,7 +137,7 @@ input[type='submit'] {
         opacity:1;
     }
 }
-
+//---fade effect end
 .footer {
     text-align: center;
     font-size: 15px;
@@ -180,8 +165,9 @@ input[type='submit'] {
 }
 
 .city-highlights {
+    font-family: 'Didact Gothic';
     text-align: center;
-    color: rgb(19, 21, 97);
+    color: rgb(108, 154, 238);
     margin: 0;
     padding: 10px;
 }
@@ -192,9 +178,9 @@ input[type='submit'] {
     justify-content: space-evenly;
 }
 .highlights-container h1 {
-    color: rgb(24, 26, 87);
+    color: rgb(25, 49, 94);
     margin: 0;
-    font-size: 22px;
+    font-size: 21px;
 }
 .single-highlight {
     display: inline-block;
@@ -211,6 +197,12 @@ input[type='submit'] {
     opacity:1;
     border:2px solid black;
 }
+.highlight-info {
+    color: rgb(254, 161, 0);
+    margin: 0;
+    padding: 0;
+    font-size: 21px;
+}
 //-media queries
 @media screen and (max-width: 815px) {
     .greeting-container {
@@ -218,7 +210,7 @@ input[type='submit'] {
         font-size: 20px;
     }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
     .highlights-container {
         display: block;
     }

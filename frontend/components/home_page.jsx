@@ -1,14 +1,10 @@
 import React from 'react';
-
 import CityIndexItem from './city_index_item';
 
 class HomePage extends React.Component {
 
     constructor(props) {
         super(props)
-        this.state = {
-            cities: ''
-        }
     }
 
     componentDidMount () {
@@ -21,7 +17,6 @@ class HomePage extends React.Component {
             return (
                 <CityIndexItem key={index} city={single_city} />
             )
-
         })
 
         return (
@@ -47,9 +42,6 @@ class HomePage extends React.Component {
         )
     }
 
-
 }
-
-
 
 export default HomePage;

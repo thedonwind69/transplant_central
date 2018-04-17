@@ -9,17 +9,10 @@ import {
     withRouter
   } from 'react-router-dom';
 
-class PostIndexItem extends React.Component {
+class UserPostIndexItem extends React.Component {
 
     constructor(props) {
         super(props);
-    }
-    
-    userShowLink () {
-        const {post} = this.props;
-        return (
-            <Link to={`/users/${post.user_id}`}>{post.username}</Link>
-        )
     }
 
     componentDidMount () {
@@ -45,8 +38,8 @@ class PostIndexItem extends React.Component {
     }
 
     deleteButton () {
-        const {post, currentUser} = this.props;
-        if (currentUser && (post.user_id === currentUser.id)) {
+        const {post, user} = this.props;
+        if (user && (post.user_id === user.id)) {
             return (
                 <button
                     class='post-delete-button'
@@ -60,10 +53,9 @@ class PostIndexItem extends React.Component {
    
     render () {
         const {post} = this.props;
+        console.log(this.props.user);
         return (
                 <div class='post-index-item'>
-                    <p class='post-stamp'>{this.timeStamp()}</p>
-                    <p class='post-stamp'>Posted By: {this.userShowLink()}</p>
 
                     <ul class='post-star-rating-list' ref='postRating'>
                         <li></li>
@@ -84,4 +76,4 @@ class PostIndexItem extends React.Component {
 
 }
 
-export default PostIndexItem;
+export default withRouter(UserPostIndexItem);

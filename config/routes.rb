@@ -4,10 +4,10 @@ Rails.application.routes.draw do
     resources :cities, only: [:index, :show] do
       resources :posts, only: [:index, :create]
     end
-    resources :posts, only: [:create, :index, :show, :delete]
+    resources :posts, only: [:create, :index, :show]
     resources :categories, only: [:index, :show]
     resources :users, only: [:create, :show, :index] do 
-      resources :posts, only: [:index, :show]
+      resources :posts, only: [:index, :show, :destroy]
     end
     resource :session, only: [:create, :destroy, :show, :index]
   end

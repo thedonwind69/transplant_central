@@ -7,7 +7,7 @@ import {
     HashRouter,
     withRouter
   } from 'react-router-dom';
-
+import UserPostIndexItemContainer from './user_post_index_item';
 
 class UserShow extends React.Component {
     constructor(props) {
@@ -15,25 +15,37 @@ class UserShow extends React.Component {
     }
 
     componentDidMount () {
-        const {fetchUser, fetchUserPosts} = this.props
+        const {fetchUser} = this.props
         fetchUser(this.props.match.params.user_id);
-        fetchUserPosts(this.props.match.params.user_id);
+    }
+
+    allThePosts () {
+        const {user, userPosts} = this.props;
+        const allPosts = userPosts;
+        let allTheUsersPosts = null;
+        if (userPosts) {
+            allTheUsersPosts = allPosts.map((post) => (
+                <UserPostIndexItemContainer post={post} />
+            ))
+            return allTheUsersPosts.reverse();
+        } else {
+            return <div></div>
+        }
+
     }
 
     render () {
-        const {users} = this.props;
+        const {user, userPosts} = this.props;
         return (
             <div>
                 
                 <div>
-                    <h1>Profile Page for : {users.username}</h1>
+                    <h1>Profile Page for : {user.username}</h1>
                 </div>
 
-                <div>
-                    
-                </div>
-                
-                
+                {/* <div>
+                    {this.allThePosts()}
+                </div> */}
                 
             </div>
         )
@@ -42,9 +54,10 @@ class UserShow extends React.Component {
 }
 
 UserShow.defaultProps = {
-    users: {
+    user: {
         id: null,
-        username: ''
+        username: '',
+        posts: []
     }
 }
 

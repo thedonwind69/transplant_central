@@ -5,6 +5,7 @@ export const RECEIVE_USER_POSTS = 'RECEIVE_USER_POSTS';
 export const RECEIVE_POST_ERRORS = 'RECEIVE_POST_ERRORS';
 export const RESET_POSTS = 'RESET_POSTS';
 export const RESET_POST_ERRORS = 'RESET_POST_ERRORS';
+export const UPDATE_WITH_DELETED_POST = 'DELETE_POST';
 
 export const receivePosts = (posts) => ({
     type: RECEIVE_POSTS,
@@ -15,6 +16,11 @@ export const receivePost = (post) => ({
     type: RECEIVE_POST,
     post: post
 });
+
+export const updateWithDeletedPost = (post) => ({
+    type: UPDATE_WITH_DELETED_POST,
+    post: post
+})
 
 export const resetPosts = () => ({
     type: RESET_POSTS,
@@ -53,5 +59,11 @@ export const createPost = (post) => {
         ), err => (
             dispatch(receivePostErrors(err.responseJSON))
         ))
+    }
+};
+
+export const deletePost = (user_id, post_id) => {
+    return function (dispatch) {
+        PostAPIUtil.deletePost(user_id, post_id).then((deletedPost) => dispatch(updateWithDeletedPost(deletedPost)))
     }
 };

@@ -11,6 +11,7 @@ import ReactDOM from 'react-dom';
 import PostIndexItem from './post_index_item';
 import CategoryIndexItem from './category_index_item';
 import TotalRatingStars from './total_rating_stars';
+import PostIndexItemContainer from './post_index_item_container';
 
 class PostsDisplay extends React.Component {
     constructor(props) {
@@ -64,7 +65,7 @@ class PostsDisplay extends React.Component {
         const allThePosts = allPosts.map((post) => {
             let currentCategoryId = this.state.currentCategoryId;
             if (post.category_id === parseInt(currentCategoryId)) {
-                return <PostIndexItem post={post} currentCategoryId={this.state.currentCategoryId}  />
+                return <PostIndexItemContainer post={post} currentCategoryId={this.state.currentCategoryId}  />
             }
         });
         return allThePosts.reverse();
