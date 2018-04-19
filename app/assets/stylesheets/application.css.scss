@@ -220,3 +220,12 @@ input[type='submit'] {
         font-size: 15px;
     }
 }
+@media screen and (max-width: 380px) {
+    .greeting-container {
+        padding: 50px;
+        font-size: 12px;
+    }
+    input[type='text'], input[type='password'] {
+        font-size: 14px;
+    }
+}

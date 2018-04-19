@@ -84,11 +84,10 @@
 
 .post-form-container {
     color: rgb(0, 0, 0);
-    border: 1px solid gray;
+    border: 1px solid rgb(85, 85, 85);
     margin-bottom: 5px;
     padding: 4px;
-    background-image: image-url('WhiteGradient.jpg');
-    background-size: 100% 100%;
+    background-color: rgb(218, 224, 228);
     text-align: center;
 }
 
@@ -163,7 +162,7 @@
 
 .total-star-rating-list li {
     color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 5px rgb(24, 24, 24);
+    text-shadow: 1px 1px 1px rgb(194, 194, 194);
     padding: 5px;
     margin-left: 3px;
     margin-right: 3px;
@@ -206,7 +205,7 @@ input[type='radio'] {
 
 .star-rating-list li {
     color: white;
-    text-shadow: 3px 3px 3px rgb(48, 48, 48);
+    text-shadow: 1px 1px 1px rgb(201, 201, 201);
 }
 
 .star-rating-list li:hover {
@@ -225,8 +224,7 @@ input[type='radio'] {
 }
 
 .post-star-rating-list li {
-    color: rgb(255, 225, 0);
-    text-shadow: 2px 2px 5px rgb(96, 96, 96);
+    color: rgb(255, 204, 0);
     padding: 2px;
 }
 
