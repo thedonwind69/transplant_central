@@ -37,7 +37,7 @@ class CityPostForm extends React.Component {
     }
 
     formButton () {
-        // if (this.props.currentUser) {
+        if (this.props.currentUser) {
             return (
                 <div>
                     <button 
@@ -48,15 +48,15 @@ class CityPostForm extends React.Component {
                     </button>
                 </div>
             )
-        // } else {
-        //     return (
-        //         <div>
-        //             <p class='not-logged-in-message'>You are not logged in. To write a review, please <Link to='/login'>
-        //             log in</Link> or <Link to='/signup'> sign up!</Link>
-        //             </p>
-        //         </div>
-        //     )
-        // }   
+        } else {
+            return (
+                <div>
+                    <p class='not-logged-in-message'>You are not logged in. To write a review, please <Link to='/login'>
+                    log in</Link> or <Link to='/signup'> sign up!</Link>
+                    </p>
+                </div>
+            )
+        }   
     }
 
     toggleForm () {
