@@ -28,7 +28,7 @@ import SearchBarContainer from './search_bar';
                     <div class="nav-bar-container">
 
                             <ul class="nav-bar-list left">
-                                <li><Link class={'nav-link nav-link-hover'} to="/">TransplantCentral</Link></li>
+                                <li><Link class={'tc-link nav-link nav-link-hover'} to="/">TransplantCentral</Link></li>
                                 <li><Link class={'nav-link nav-link-hover'} to="/home">Home</Link></li>        
                                 {/* <li> <SearchBarContainer /> </li> */}
                             </ul>
@@ -47,7 +47,7 @@ import SearchBarContainer from './search_bar';
                     <div class="nav-bar-container">
                 
                             <ul class="nav-bar-list left">
-                                <li> <Link class={'nav-link nav-link-hover'} to="/">TransplantCentral</Link> </li>
+                                <li> <Link class={'tc-link nav-link nav-link-hover'} to="/">TransplantCentral</Link> </li>
                                 <li> <Link class={'nav-link nav-link-hover'} to="/home">Home</Link></li>
                                 {/* <li> <SearchBarContainer /> </li> */}
                             </ul>

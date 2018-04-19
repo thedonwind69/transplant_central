@@ -65,12 +65,15 @@ input[type='submit'] {
 .right {
     float: right;
 }
-
+.tc-link {
+    font-family: Lemon;
+    font-size: 21px;
+}
 .nav-bar-list {
     padding: 0;
 }
 .nav-bar-list li {
-    padding: 15px;
+    padding: 17px;
     float: left;
 }
 .nav-link {
