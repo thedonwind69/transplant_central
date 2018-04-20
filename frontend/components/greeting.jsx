@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import {
     Route,
     Redirect,
@@ -24,7 +25,7 @@ class Greeting extends React.Component {
         return (
             <div>
                 {this.currentUserHeading()}
-                <div className="greeting-container">
+                <div class="greeting-container">
                     <h1>Welcome to TransplantCentral</h1>
                     <p>Where you can review your favorite city</p>
                 </div>
