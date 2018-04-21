@@ -141,7 +141,7 @@ class Highlights extends React.Component {
 
     render () {
         return (
-            <div>
+            <div class='highlights-background'>
                 <h1 class='city-highlights'>City Highlights</h1>
                 <div class='clearfix'></div>
 

@@ -22,7 +22,7 @@ ul {
 }
 body {
     font-family: Questrial;
-    background: rgb(255, 255, 255);
+    background: rgb(252, 254, 255);
     margin: 0;
 }
 button {
@@ -173,6 +173,13 @@ input[type='submit'] {
     color: rgb(108, 154, 238);
     margin: 0;
     padding: 10px;
+}
+.highlights-background {
+    background-color: white;
+    margin-left: 25px;
+    margin-right: 25px;
+    min-height: 375px;
+    box-shadow: 2px 2px 2px rgb(237, 237, 237);
 }
 .highlights-container {
     text-align: center;
