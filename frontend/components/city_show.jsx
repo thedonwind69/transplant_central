@@ -22,6 +22,19 @@ class CityShow extends React.Component {
     componentDidMount () {
         const { fetchCity } = this.props;
         fetchCity(this.props.match.params.city_id);
+        const dotList = ReactDOM.findDOMNode(this.refs.dotList);
+        for (let i=0; i<=this.state.profilePicIndex; i++) {
+            dotList.children[i].classList.add('dot-highlight');
+        }
+    }
+    
+    componentDidUpdate () {
+        const dotList = ReactDOM.findDOMNode(this.refs.dotList);
+        for (let j=0; j<3; j++) {
+            if (j === this.state.profilePicIndex) {
+                dotList.children[j].classList.add('dot-highlight');
+            }
+        }
     }
 
     componentWillReceiveProps (newProps) {
@@ -39,6 +52,7 @@ class CityShow extends React.Component {
     changePicLeft (event) {
         event.preventDefault();
         let cityPic = ReactDOM.findDOMNode(this.refs.cityPic);
+        const dotList = ReactDOM.findDOMNode(this.refs.dotList);
         cityPic.classList.toggle('profile-pic-fade');
         this.setState({
             profilePicIndex: this.state.profilePicIndex -= 1
@@ -48,11 +62,15 @@ class CityShow extends React.Component {
                 profilePicIndex: 2
             })
         }
+        for (let i=0; i<3; i++) {
+            dotList.children[i].classList.remove('dot-highlight');
+        }
     }
 
     changePicRight (event) {
         event.preventDefault();
         let cityPic = ReactDOM.findDOMNode(this.refs.cityPic);
+        const dotList = ReactDOM.findDOMNode(this.refs.dotList);
         cityPic.classList.toggle('profile-pic-fade');
         this.setState({
             profilePicIndex: this.state.profilePicIndex += 1
@@ -62,11 +80,14 @@ class CityShow extends React.Component {
                 profilePicIndex: 0
             })
         }
+        for (let i=0; i<3; i++) {
+            dotList.children[i].classList.remove('dot-highlight');
+        }
     }
 
     render () {  
         const { currentCity } = this.props;
-
+ 
             return (
                 <div class="city-main-content">
         
@@ -87,6 +108,14 @@ class CityShow extends React.Component {
                             >
                             {`<`}
                             </i>
+
+                            <ul ref='dotList' class='dot-list'>
+                                <li class='dot'></li>
+                                <li class='dot'></li>
+                                <li class='dot'></li>
+                            </ul>
+
+
 
                             <div class='clearfix'></div>
                         </div>
