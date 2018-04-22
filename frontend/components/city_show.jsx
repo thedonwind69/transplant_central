@@ -66,7 +66,7 @@ class CityShow extends React.Component {
 
     render () {  
         const { currentCity } = this.props;
-      
+
             return (
                 <div class="city-main-content">
         
