@@ -38,6 +38,8 @@ class CityShow extends React.Component {
 
     changePicLeft (event) {
         event.preventDefault();
+        let cityPic = ReactDOM.findDOMNode(this.refs.cityPic);
+        cityPic.classList.toggle('profile-pic-fade');
         this.setState({
             profilePicIndex: this.state.profilePicIndex -= 1
         })
@@ -50,6 +52,8 @@ class CityShow extends React.Component {
 
     changePicRight (event) {
         event.preventDefault();
+        let cityPic = ReactDOM.findDOMNode(this.refs.cityPic);
+        cityPic.classList.toggle('profile-pic-fade');
         this.setState({
             profilePicIndex: this.state.profilePicIndex += 1
         })
@@ -66,8 +70,8 @@ class CityShow extends React.Component {
             return (
                 <div class="city-main-content">
         
-                    <div class='city-profile-pic-container'>
-                        <div ref='cityPic' class={`city-profile-pic ${this.profilePicClass()}`}>
+                    <div ref='cityPic' class='city-profile-pic-container'>
+                        <div class={`city-profile-pic ${this.profilePicClass()}`}>
                             <h1 class='city-profile-header2'>{currentCity.name}</h1>
 
                             <i 
