@@ -22,7 +22,7 @@ ul {
 }
 body {
     font-family: Questrial;
-    background: rgb(252, 254, 255);
+    background: rgb(246, 248, 250);
     margin: 0;
 }
 button {
@@ -178,8 +178,8 @@ input[type='submit'] {
     background-color: white;
     margin-left: 25px;
     margin-right: 25px;
-    min-height: 375px;
-    box-shadow: 1px 2px 2px 2px rgb(237, 237, 237);
+    min-height: 370px;
+    box-shadow: 1px 2px 2px 2px rgb(215, 215, 215);
 }
 .highlights-container {
     text-align: center;
@@ -194,7 +194,6 @@ input[type='submit'] {
 }
 .single-highlight {
     display: inline-block;
-    border: 2px solid white;
     margin: 2px;
     padding: 0;
     border-radius: 15px;
@@ -204,8 +203,8 @@ input[type='submit'] {
     opacity: 0.85;
 }
 .single-highlight:hover {
-    opacity:1;
-    border:2px solid black;
+    opacity: 1;
+    box-shadow: 1px 1px 1px 1px black;
 }
 .highlight-info {
     color: rgb(254, 161, 0);
@@ -214,9 +213,9 @@ input[type='submit'] {
     font-size: 21px;
 }
 //-media queries
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 2000px) {
     body {
-        width: 1700px;
+        width: 1950px;
         margin: auto;
     }
 }
@@ -229,6 +228,9 @@ input[type='submit'] {
 @media screen and (max-width: 620px) {
     .highlights-container {
         display: block;
+    }
+    .highlights-background {
+        min-height: 750px;
     }
 }
 @media screen and (max-width: 480px) {

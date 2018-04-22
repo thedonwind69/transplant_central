@@ -8,9 +8,7 @@ import {
     HashRouter,
     withRouter
   } from 'react-router-dom';
-
 import CityPostFormContainer from './city_post_form_container';
-
 import PostsDisplayContainer from './posts_display_container';
 
 class CityShow extends React.Component {
@@ -62,12 +60,6 @@ class CityShow extends React.Component {
         }
     }
 
-    displayButton (event) {
-        event.preventDefault();
-        const button = event.currentTarget;
-        // button.classList.toggle('hide-this-shit');
-    }
-
     render () {  
         const { currentCity } = this.props;
       
@@ -79,7 +71,6 @@ class CityShow extends React.Component {
                             <h1 class='city-profile-header2'>{currentCity.name}</h1>
 
                             <i 
-                            onMouseOver={this.displayButton.bind(this)} 
                             onClick={this.changePicRight.bind(this)} 
                             class="city-pic-button city-pic-button-right"
                             >
@@ -87,7 +78,6 @@ class CityShow extends React.Component {
                             </i>
 
                             <i 
-                            onMouseOver={this.displayButton.bind(this)} 
                             onClick={this.changePicLeft.bind(this)} 
                             class="city-pic-button city-pic-button-left"
                             >

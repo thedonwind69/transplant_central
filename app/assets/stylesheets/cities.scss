@@ -246,11 +246,9 @@
     background-image: image-url('WashingtonDCPage2.jpg');
 }
 //City Pics End ------->
-
 .city-profile-pic-container {
     width: 100%;
 }
-
 .city-profile-pic {
     position: relative;
     background-size: 100% 100%;
@@ -262,7 +260,13 @@
     -webkit-animation: fadein 1.2s; /* Safari and Chrome */
     -o-animation: fadein 1.2s; /* Opera */
 }
-
+.profile-pic-fade {
+    position: relative;
+    animation: fadein 1.2s;
+    -moz-animation: fadein 1.2s; /* Firefox */
+    -webkit-animation: fadein 1.2s; /* Safari and Chrome */
+    -o-animation: fadein 1.2s; /* Opera */
+}
 @keyframes fadein {
     from {
         opacity:0;

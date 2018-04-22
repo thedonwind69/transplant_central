@@ -2,74 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.post-tabs {
-    font-size: 15px;
-    background-color: rgb(0, 39, 87);
-    margin: 0;
-}
-
-.post-tabs ul {
-    display: flex;
-    padding: 0;
-    text-align: center;
-}
-
-.post-tab {
-    padding: 7px;
-    min-width: 120px;
-    background: rgb(0, 39, 87);
-    color: white;
-}
-
-.post-tab:hover {
-    background: rgb(83, 148, 228);
-    cursor: pointer;
-}
-
-.highlight-category {
-    position: relative;
-    background: rgb(83, 148, 228);
-}
-
-.highlight-category:after {
-    content: ' ';
-    width: 0px;
-    height: 0px;
-    border-left: 12px solid transparent;
-    border-top: 12px solid rgb(83, 148, 228);
-    border-right: 12px solid transparent;
-    border-bottom: 12px solid transparent;
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    margin-left: -10px;
-}
-
+//-post form
 .city-post-form-button {
     padding: 7px;
-    font-size: 21px;
-    border-radius: 10px;
+    font-size: 20px;
+    border-radius: 5px;
     color: white;
-    background-color: rgb(119, 174, 233);
+    background-color: rgb(24, 86, 152);
 }
-
 .city-post-form-button:hover {
     background-color: rgb(242, 140, 140);
 }
-
 .post-content {
     font-size: 18px;
     min-width: 300px;
     min-height: 150px;
     border-radius: 10px;
 }
-
 .post-subject {
     font-size: 18px;
     min-width: 300px;
     border-radius: 10px;
 }
-
 .post-submit-button {
     padding: 7px;
     font-size: 18px;
@@ -77,27 +31,22 @@
     color: white;
     background-color: rgb(119, 174, 233);
 }
-
 .post-submit-button:hover {
     background-color: rgb(242, 140, 140);
 }
-
 .post-form-container {
     color: rgb(0, 0, 0);
-    border: 1px solid rgb(159, 159, 159);
-    box-shadow: 2px 2px 2px rgb(228, 228, 228);
+    box-shadow: 1px 1px 2px 1px rgb(228, 228, 228);
     margin-bottom: 5px;
     padding: 4px;
-    background: linear-gradient(rgb(245, 245, 245), rgb(210, 226, 240));
+    background: linear-gradient(rgb(249, 249, 249), rgb(242, 246, 254));
     text-align: center;
 }
-
 .post-error-message {
     font-size: 18px;
     margin: auto;
     color: rgb(255, 42, 42);
 }
-
 .post-category-dropdown {
     font-size: 17px;
     min-width: 300px;
@@ -105,7 +54,7 @@
     background-color: rgb(255, 255, 255);
     text-align: center;
 }
-
+//post-index-items
 .post-index-item {
     border-bottom: 1px solid rgb(199, 199, 199);
     background: white;
@@ -114,7 +63,6 @@
     margin-right: 10px;
     padding: 5px;
 }
-
 .post-delete-button {
     border-radius: 5px;
     font-size: 16px;
@@ -124,21 +72,17 @@
 .post-delete-button:hover {
     background-color: rgb(174, 32, 32);
 }
-
 .post-index-item-rating {
     color: rgb(255, 174, 0);
 }
-
 .post-index-item-subject {
     font-size: 25px;
     color: rgb(89, 174, 244);
 }
-
 .post-stamp {
     color: grey;
     font-size: 15px;
 }
-
 .post-index-item-content {
     max-width: 550px;
     font-size: 17px;
@@ -147,21 +91,18 @@
 .total-rating-container {
     margin-left: 2px;
 }
-
 .total-rating-container h1 {
     color: rgb(255, 174, 0);
     margin-left: 5px;
     font-size: 40px;
     margin: 0;
 }
-
 .total-star-rating-list {
     display: flex;
     font-size: 32px;
     margin: auto;
     padding: 0;
 }
-
 .total-star-rating-list li {
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 1px rgb(194, 194, 194);
@@ -202,12 +143,11 @@ input[type='radio'] {
 .star-rating-list {
     display: flex;
     font-size: 30px;
-    margin: auto;
 }
 
 .star-rating-list li {
-    color: white;
-    text-shadow: 1px 1px 1px rgb(201, 201, 201);
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px rgb(121, 121, 121);
 }
 
 .star-rating-list li:hover {
@@ -229,7 +169,7 @@ input[type='radio'] {
     color: rgb(255, 204, 0);
     padding: 2px;
 }
-
+//-mq
 @media screen and (max-width: 550px) {
     .post-tabs ul {
         display: block;
@@ -242,5 +182,26 @@ input[type='radio'] {
         border-radius: 50%;
         width: 25px;
         height: 25px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .post-content {
+        font-size: 14px;
+        min-width: 250px;
+    }
+    .post-subject {
+        font-size: 14px;
+        min-width: 250px;
+    }
+    .post-category-dropdown {
+        font-size: 14px;
+        min-width: 250px;
+    }
+    .star-rating-container {
+        width: 205px;
+    }
+    .star-rating-list {
+        font-size: 25px;
+        padding: 0;
     }
 }
