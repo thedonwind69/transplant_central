@@ -22,8 +22,8 @@ class Highlights extends React.Component {
         let mostReviewedCity = null;
         let mostReviewedCityId = null;
         this.props.cities.forEach((city) => {
-            if (city.number_of_posts > highestNumberOfPosts) {
-                highestNumberOfPosts = city.number_of_posts;
+            if (city.numberOfPosts > highestNumberOfPosts) {
+                highestNumberOfPosts = city.numberOfPosts;
                 mostReviewedCity = city.name;
                 mostReviewedCityId = city.id;
             }
@@ -31,7 +31,7 @@ class Highlights extends React.Component {
         const mostReviewedCityObject = {
             id: mostReviewedCityId,
             name: mostReviewedCity,
-            number_of_posts: highestNumberOfPosts
+            numberOfPosts: highestNumberOfPosts
         };
         return mostReviewedCityObject
     }
@@ -42,7 +42,7 @@ class Highlights extends React.Component {
             mostReviewedCity = this.mostReviewedCity().name.split(' ').join('');
                 return (
                     <div>
-                        <h1 class='highlight-info'>{this.mostReviewedCity().number_of_posts} Reviews</h1>
+                        <h1 class='highlight-info'>{this.mostReviewedCity().numberOfPosts} Reviews</h1>
                         <Link to={`/cities/${this.mostReviewedCity().id}`}>
                             <div class={`single-highlight ${mostReviewedCity}`}>
                             </div>
@@ -59,8 +59,8 @@ class Highlights extends React.Component {
         let highestRatedCity = null;
         let highestRatedCityId = null;
         this.props.cities.forEach((city) => {
-            if ( (city.totalRating / city.number_of_posts) > highestRating ) {
-                highestRating = (city.totalRating / city.number_of_posts);
+            if (city.averageRating > highestRating ) {
+                highestRating = city.averageRating;
                 highestRatedCity = city.name;
                 highestRatedCityId = city.id
             }
@@ -96,17 +96,17 @@ class Highlights extends React.Component {
         const {cities} = this.props;
         const citiesWithRating = [];
         cities.forEach((city) => {
-            if (city.totalRating > 0) {
+            if (city.averageRating > 0) {
                 citiesWithRating.push(city);
             }
         })
         if (citiesWithRating.length >= 2) {
-            let lowestRating = (citiesWithRating[0].totalRating / citiesWithRating[0].number_of_posts);
+            let lowestRating = citiesWithRating[0].averageRating;
             let lowestRatedCity = citiesWithRating[0].name;
             let lowestRatedCityId = citiesWithRating[0].id;
             citiesWithRating.forEach((city) => {
-                if ((city.totalRating / city.number_of_posts) < lowestRating) {
-                    lowestRating = city.totalRating / city.number_of_posts;
+                if ((city.averageRating) < lowestRating) {
+                    lowestRating = city.averageRating;
                     lowestRatedCity = city.name;
                     lowestRatedCityId = city.id;
                 }

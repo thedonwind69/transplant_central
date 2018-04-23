@@ -9,7 +9,7 @@ class City < ApplicationRecord
             totalRating += post.rating
         end
         
-        return (totalRating / self.posts.length).to_f
+        return (totalRating.to_f / self.posts.length).round(1)
     end
 
 end
