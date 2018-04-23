@@ -87,7 +87,6 @@ class CityShow extends React.Component {
 
     render () {  
         const { currentCity } = this.props;
-        console.log('sex');
             return (
                 <div class="city-main-content">
         
