@@ -27,7 +27,7 @@ class CityShow extends React.Component {
             dotList.children[i].classList.add('dot-highlight');
         }
     }
-    
+
     componentDidUpdate () {
         const dotList = ReactDOM.findDOMNode(this.refs.dotList);
         for (let j=0; j<3; j++) {
@@ -53,7 +53,7 @@ class CityShow extends React.Component {
         event.preventDefault();
         let cityPic = ReactDOM.findDOMNode(this.refs.cityPic);
         const dotList = ReactDOM.findDOMNode(this.refs.dotList);
-        cityPic.classList.toggle('profile-pic-fade');
+        cityPic.classList.toggle('profile-pic-swoosh');
         this.setState({
             profilePicIndex: this.state.profilePicIndex -= 1
         })
@@ -71,7 +71,7 @@ class CityShow extends React.Component {
         event.preventDefault();
         let cityPic = ReactDOM.findDOMNode(this.refs.cityPic);
         const dotList = ReactDOM.findDOMNode(this.refs.dotList);
-        cityPic.classList.toggle('profile-pic-fade');
+        cityPic.classList.toggle('profile-pic-swoosh');
         this.setState({
             profilePicIndex: this.state.profilePicIndex += 1
         })
@@ -87,7 +87,7 @@ class CityShow extends React.Component {
 
     render () {  
         const { currentCity } = this.props;
- 
+        
             return (
                 <div class="city-main-content">
         
@@ -115,8 +115,6 @@ class CityShow extends React.Component {
                                 <li class='dot'></li>
                             </ul>
 
-
-
                             <div class='clearfix'></div>
                         </div>
                     </div>
@@ -126,9 +124,7 @@ class CityShow extends React.Component {
                     <div>
                         <CityPostFormContainer currentCity={currentCity} />
                     </div>
-
                     <PostsDisplayContainer />
-
                 </div>
             )
     }

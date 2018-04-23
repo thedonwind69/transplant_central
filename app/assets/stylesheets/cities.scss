@@ -255,56 +255,90 @@
     background-repeat: no-repeat;
     padding: 0;
     margin: 0;
-    animation: fadein 1.2s;
-    -moz-animation: fadein 1.2s; /* Firefox */
-    -webkit-animation: fadein 1.2s; /* Safari and Chrome */
-    -o-animation: fadein 1.2s; /* Opera */
+    animation: cityprofilepicfadein 0.8s;
+    -moz-animation: cityprofilepicfadein 0.8s; /* Firefox */
+    -webkit-animation: cityprofilepicfadein 0.8s; /* Safari and Chrome */
+    -o-animation: cityprofilepicfadein 0.8s; /* Opera */
 }
-.profile-pic-fade {
-    animation: fadein 0.5s;
-    -moz-animation: fadein 0.5s; /* Firefox */
-    -webkit-animation: fadein 0.5s; /* Safari and Chrome */
-    -o-animation: fadein 0.5s; /* Opera */
+.profile-pic-swoosh {
+    position: relative;
+    animation: swoosh 0.5s;
+    -moz-animation: swoosh 0.5s; /* Firefox */
+    -webkit-animation: swoosh 0.5s; /* Safari and Chrome */
+    -o-animation: swoosh 0.5s; /* Opera */
 }
-@keyframes fadein {
+//swoosh
+@keyframes swoosh {
     from {
-        opacity:0;
+        left: -100%;
     }
     to {
-        opacity:0.9;
+        left: 0%;
     }
 }
-@-moz-keyframes fadein { /* Firefox */
+@-moz-keyframes swoosh { /* Firefox */
     from {
-        opacity:0;
+        left: -100%;
     }
     to {
-        opacity:0.9;
+        left: 0%;
     }
 }
-@-webkit-keyframes fadein { /* Safari and Chrome */
+@-webkit-keyframes swoosh { /* Safari and Chrome */
     from {
-        opacity:0;
+        left: -100%;
     }
     to {
-        opacity:0.9;
+        left: 0%;
     }
 }
-@-o-keyframes fadein { /* Opera */
+@-o-keyframes swoosh { /* Opera */
     from {
-        opacity:0;
+        left: -100%;
     }
     to {
-        opacity: 0.9;
+        left: 0%;
     }
 }
-
+//fade in
+@keyframes cityprofilepicfadein {
+    from {
+        top: -650px;
+    }
+    to {
+        top: 0px;
+    }
+}
+@-moz-keyframes cityprofilepicfadein { /* Firefox */
+    from {
+        top: -650px;
+    }
+    to {
+        top: 0px;
+    }
+}
+@-webkit-keyframes cityprofilepicfadein { /* Safari and Chrome */
+    from {
+        top: -650px;
+    }
+    to {
+        top: 0px;
+    }
+}
+@-o-keyframes cityprofilepicfadein { /* Opera */
+    from {
+        top: -650px;
+    }
+    to {
+        top: 0px;
+    }
+}
+//end
 .home-page-container {
     margin: auto;
     min-width: 900px;
     min-height: 200px;
 }
-
 .city-item {
     border-radius: 15px;
     width: 190px;
@@ -317,7 +351,6 @@
     -webkit-animation: cityfadein 0.8s; /* Safari and Chrome */
     -o-animation: cityfadein 0.8s; /* Opera */
 }
-
 @keyframes cityfadein {
     from {
         opacity:0.7;
@@ -350,7 +383,7 @@
         opacity: 0.8;
     }
 }
-
+//-cityfadeinend
 .city-item:hover {
     opacity: 1.0;
 }
