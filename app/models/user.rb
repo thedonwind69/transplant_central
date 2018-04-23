@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 
-    has_many :posts
+    has_many :posts, :dependent => :delete_all
     validates :username, :password_digest, :session_token, presence: true
     validates :username, uniqueness: true
 
