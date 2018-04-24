@@ -336,8 +336,7 @@
 //end
 .home-page-container {
     margin: auto;
-    min-width: 900px;
-    min-height: 200px;
+    text-align: center;
 }
 .city-item {
     border-radius: 15px;
@@ -346,53 +345,14 @@
     opacity: 0.80;
     margin: 2px;
     background-size: 100% 100%;
-    animation: cityfadein 0.8s;
-    -moz-animation: cityfadein 0.8s; /* Firefox */
-    -webkit-animation: cityfadein 0.8s; /* Safari and Chrome */
-    -o-animation: cityfadein 0.8s; /* Opera */
 }
-@keyframes cityfadein {
-    from {
-        opacity:0.7;
-    }
-    to {
-        opacity:0.8;
-    }
-}
-@-moz-keyframes cityfadein { /* Firefox */
-    from {
-        opacity:0.7;
-    }
-    to {
-        opacity:0.8;
-    }
-}
-@-webkit-keyframes cityfadein { /* Safari and Chrome */
-    from {
-        opacity:0.7;
-    }
-    to {
-        opacity:0.8;
-    }
-}
-@-o-keyframes cityfadein { /* Opera */
-    from {
-        opacity:0.7;
-    }
-    to {
-        opacity: 0.8;
-    }
-}
-//-cityfadeinend
 .city-item:hover {
     opacity: 1.0;
 }
-
 .city-item-row {
     display: flex;
     justify-content: space-evenly;
 }
-
 .city-profile-header2 {
     font-size: 120px;
     color: rgb(255, 255, 255);
@@ -400,7 +360,6 @@
     margin: 0;
     padding: 190px;
 }
-
 .city-pic-button {
     margin: 0;
     padding: 0;
@@ -411,21 +370,18 @@
     height: 75px;
     opacity: 0.8;
 }
-
 .city-pic-button:hover {
     color: rgb(255, 255, 255);
     cursor: pointer;
     background: rgb(18, 18, 18);
     border-radius: 50%;
 }
-
 .city-pic-button-left {
     margin-left: 10px;
     position: absolute;
     top: 45%;
     left: 0%;
 }
-
 .city-pic-button-right {
     margin-right: 10px;
     position: absolute;
@@ -448,16 +404,19 @@
     background-color: white;
 }
 //--------> Media Queries
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1020px) {
     .city-item {
         width: 140px;
         height: 140px;
     }
 }
 @media screen and (max-width: 900px) {
+    .home-page-container {
+        width: 650px;
+    }
     .city-item {
-        width: 360px;
-        height: 360px;
+        width: 300px;
+        height: 300px;
     }
     .city-item-row {
         display: inline-block;
@@ -470,6 +429,9 @@
     }
 }
 @media screen and (max-width: 750px) {
+    .home-page-container {
+        width: 370px;
+    }
     .city-item {
         width: 370px;
         height: 370px;
@@ -493,9 +455,25 @@
         width: 10px;
     }
 }
+@media screen and (max-width: 450px) {
+    .home-page-container {
+        width: 280px;
+    }
+    .city-item {
+        width: 280px;
+        height: 280px;
+    }
+}
 @media screen and (max-width: 350px) {
     .city-profile-header2 {
         font-size: 30px;
         padding: 47px;
+    }
+    .home-page-container {
+        width: 170px;
+    }
+    .city-item {
+        width: 170px;
+        height: 170px;
     }
 }

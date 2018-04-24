@@ -37,13 +37,10 @@ class SessionForm extends React.Component {
     }
 
     renderErrors() {
-        const localErrors = [];
         if (this.props.errors.length > 0) {
-            localErrors.push('Wrong Password/Username');
-        }
             return (
                 <ul>
-                    {localErrors.map((error, i) => (
+                    {this.props.errors.map((error, i) => (
                     <li class='error-message' key={`error-${i}`}>
                         {error}
                     </li>
@@ -52,6 +49,7 @@ class SessionForm extends React.Component {
                 </ul>
                
             );
+        }   
     }
 
     render () {

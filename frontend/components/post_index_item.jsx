@@ -8,11 +8,15 @@ import {
     HashRouter,
     withRouter
   } from 'react-router-dom';
+import PostUpdateFormContainer from './post_update_form_container';
 
 class PostIndexItem extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            editMode: false
+        }
     }
     
     userShowLink () {
@@ -31,6 +35,17 @@ class PostIndexItem extends React.Component {
         }
     }
 
+    componentDidUpdate () {
+        const {post} = this.props;
+        const postRatingList = ReactDOM.findDOMNode(this.refs.postRating) ? ReactDOM.findDOMNode(this.refs.postRating) : null;
+        if (postRatingList) {
+            for (let i=0; i<post.rating; i++) {
+                postRatingList.children[i].classList.add('fa');
+                postRatingList.children[i].classList.add('fa-star');
+            }
+        }
+    }
+
     timeStamp () {
         const {post} = this.props;
         const monthDay = post.created_at.toString().slice(5, 10);
@@ -42,6 +57,24 @@ class PostIndexItem extends React.Component {
         event.preventDefault();
         const {post, currentUser} = this.props;
         this.props.deletePost(currentUser.id, post.id);
+    }
+
+    toggleUpdateForm () {
+        this.setState({editMode: !this.state.editMode});
+    }
+
+    updateButton () {
+        const {post, currentUser} = this.props;
+        // if (currentUser && (post.user_id === currentUser.id)) {
+            return (
+                <button
+                    class='post-delete-button'
+                    onClick={this.toggleUpdateForm.bind(this)}
+                >
+                Update Post
+                </button>
+            )
+        // }
     }
 
     deleteButton () {
@@ -60,7 +93,9 @@ class PostIndexItem extends React.Component {
    
     render () {
         const {post} = this.props;
-        return (
+
+        // if (!this.state.editMode) {
+            return (
                 <div class='post-index-item'>
                     <p class='post-stamp'>{this.timeStamp()}</p>
                     <p class='post-stamp'>Posted By: {this.userShowLink()}</p>
@@ -77,9 +112,16 @@ class PostIndexItem extends React.Component {
                     <div class='post-index-item-content'>
                         <p>{post.content}</p>
                     </div>
+                    {/* {this.updateButton()} */}
                     {this.deleteButton()}
                 </div>
-        )
+            )
+        // } else {
+        //     return (
+        //         <PostUpdateFormContainer post={post} cancel={this.toggleUpdateForm.bind(this)}/>
+        //     )
+        // }
+        
     }
 
 }

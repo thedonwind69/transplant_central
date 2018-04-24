@@ -58,7 +58,6 @@ input[type='submit'] {
     color: gray; 
     min-height: 40px;
 }
-
 .left {
     float: left;
 }
@@ -244,5 +243,8 @@ input[type='submit'] {
     }
     input[type='text'], input[type='password'] {
         font-size: 14px;
+    }
+    .nav-bar-container, .tc-link {
+        font-size: 18px;
     }
 }

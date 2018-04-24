@@ -17,7 +17,7 @@ class CityPostForm extends React.Component {
             content: null,
             rating: null,
             user_id: this.props.currentUser ? this.props.currentUser.id : null,
-            city_id: null,
+            city_id: this.props.match.params.city_id,
             category_id: null,
         }
     }
@@ -93,8 +93,7 @@ class CityPostForm extends React.Component {
     update (field) {
         return (event) => {
             this.setState({
-                [field]: event.currentTarget.value,
-                city_id: this.props.match.params.city_id
+                [field]: event.currentTarget.value
             })
         }
     }
