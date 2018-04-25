@@ -69,7 +69,7 @@
     color: white;
     background-color: rgb(255, 128, 128);
 }
-.post-delete-button:hover {
+.post-delete-button:hover, .post-update-button:hover {
     background-color: rgb(174, 32, 32);
 }
 .post-index-item-rating {
@@ -169,6 +169,24 @@ input[type='radio'] {
     color: rgb(255, 204, 0);
     padding: 2px;
 }
+//edit-form
+.post-update-form {
+    padding: 5px;
+}
+.post-update-form textarea, .post-update-form input[type="text"], .post-update-form select {
+    font-size: 17px;
+    border-radius: 10px;
+    min-width: 250px;
+}
+.post-update-form textarea {
+    min-height: 100px;
+}
+.post-update-button {
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(133, 133, 133);
+}
 //-mq
 @media screen and (max-width: 550px) {
     .post-tabs ul {
@@ -203,5 +221,9 @@ input[type='radio'] {
     .star-rating-list {
         font-size: 25px;
         padding: 0;
+    }
+    .post-update-form textarea, .post-update-form input[type="text"] {
+        font-size: 15px;
+        min-width: 185px;
     }
 }

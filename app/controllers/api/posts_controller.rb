@@ -18,11 +18,11 @@ class Api::PostsController < ApplicationController
 
     def update
       @post = Post.find(params[:id])
-      if @post.update(post_params)
-        render :show
-      else
-        render json: @post.errors, status: :unprocessable_entity
-      end
+      @post.update_attributes(post_params)
+      render :show
+      # else
+      #   render json: @post.errors, status: :unprocessable_entity
+      # end
     end
 
     def destroy

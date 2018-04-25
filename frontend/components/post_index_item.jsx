@@ -39,6 +39,10 @@ class PostIndexItem extends React.Component {
         const {post} = this.props;
         const postRatingList = ReactDOM.findDOMNode(this.refs.postRating) ? ReactDOM.findDOMNode(this.refs.postRating) : null;
         if (postRatingList) {
+            for (let i=0; i<postRatingList.children.length; i++) {
+                postRatingList.children[i].classList.remove('fa');
+                postRatingList.children[i].classList.remove('fa-star');
+            }
             for (let i=0; i<post.rating; i++) {
                 postRatingList.children[i].classList.add('fa');
                 postRatingList.children[i].classList.add('fa-star');
@@ -65,16 +69,16 @@ class PostIndexItem extends React.Component {
 
     updateButton () {
         const {post, currentUser} = this.props;
-        // if (currentUser && (post.user_id === currentUser.id)) {
+        if (currentUser && (post.user_id === currentUser.id)) {
             return (
                 <button
-                    class='post-delete-button'
+                    class='post-update-button'
                     onClick={this.toggleUpdateForm.bind(this)}
                 >
                 Update Post
                 </button>
             )
-        // }
+        }
     }
 
     deleteButton () {
@@ -94,7 +98,7 @@ class PostIndexItem extends React.Component {
     render () {
         const {post} = this.props;
 
-        // if (!this.state.editMode) {
+        if (!this.state.editMode) {
             return (
                 <div class='post-index-item'>
                     <p class='post-stamp'>{this.timeStamp()}</p>
@@ -112,15 +116,15 @@ class PostIndexItem extends React.Component {
                     <div class='post-index-item-content'>
                         <p>{post.content}</p>
                     </div>
-                    {/* {this.updateButton()} */}
+                    {this.updateButton()}
                     {this.deleteButton()}
                 </div>
             )
-        // } else {
-        //     return (
-        //         <PostUpdateFormContainer post={post} cancel={this.toggleUpdateForm.bind(this)}/>
-        //     )
-        // }
+        } else {
+            return (
+                <PostUpdateFormContainer post={post} cancel={this.toggleUpdateForm.bind(this)}/>
+            )
+        }
         
     }
 

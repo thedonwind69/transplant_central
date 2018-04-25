@@ -7,7 +7,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    updatePost: (user_id, post_id) => dispatch(updatePost(user_id, post_id))
+    updatePost: (post, user_id, post_id) => dispatch(updatePost(post, user_id, post_id))
 });
 
 const PostFormUpdateContainer = connect(mapStateToProps, mapDispatchToProps)(PostUpdateForm);

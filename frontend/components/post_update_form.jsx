@@ -27,10 +27,8 @@ class PostUpdateForm extends React.Component {
         event.preventDefault();
         const {post, currentUser} = this.props;
         const updatedPostObject = Object.assign({}, this.state);
-        console.log(post);
-        console.log(post.id);
         this.props.updatePost(updatedPostObject, currentUser.id, post.id);
-        this.props.cancel;
+        this.props.cancel();
     }
 
     update (field) {
@@ -42,20 +40,31 @@ class PostUpdateForm extends React.Component {
     }
      
     render () {
-        console.log(this.props);
+        
         return (
             <div class='post-index-item'>
-                <form onSubmit={this.submitEditedPost.bind(this)}>
-                    <label for='subject' >Subject</label>
+                <form class='post-update-form' onSubmit={this.submitEditedPost.bind(this)}>
+                    <label for='subject'>Subject</label>
                         <br />
-                    <input class='post-subject' id='subject' type='text' value={this.state.subject} onChange={this.update('subject')}/>
+                    <input id='subject' type='text' value={this.state.subject} onChange={this.update('subject')}/>
                     <br />
                     <label for='content'>Content</label>
                         <br />
-                    <textarea id='content' class='post-content' value={this.state.content} onChange={this.update('content')}></textarea>
+                    <textarea id='content' value={this.state.content} onChange={this.update('content')}></textarea>
                         <br />
-
-                    <input type='submit' value='Edit Post' />
+                    
+                    <label for='rating'>New Rating</label>
+                        <br />
+                    <select id='rating' value={this.state.rating} onChange={this.update('rating')}>
+                        <option disabled selected>Choose new rating</option>
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                        <br /> <br />
+                    <input class='post-update-button' type='submit' value='Edit Post' />
 
                     <button onClick={this.props.cancel}>Cancel</button>
                 </form>

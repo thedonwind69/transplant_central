@@ -22,8 +22,8 @@ const postsReducer = (state = {}, action) => {
             const newStateWithoutUpdatedPost = newStateArray.filter((post) => (
                 post.id !== action.post.id
             ))
-            var newStateWithNewUpdatedPost = newStateWithoutUpdatedPost.push(action.post);
-            return newStateWithNewUpdatedPost;
+            newStateWithoutUpdatedPost.push(action.post);
+            return newStateWithoutUpdatedPost;
         default:
             return state;
     }
