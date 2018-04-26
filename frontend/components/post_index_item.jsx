@@ -52,8 +52,8 @@ class PostIndexItem extends React.Component {
 
     timeStamp () {
         const {post} = this.props;
-        const monthDay = post.created_at.toString().slice(5, 10);
-        const year = post.created_at.toString().slice(0, 4);
+        const monthDay = post.updated_at.toString().slice(5, 10);
+        const year = post.updated_at.toString().slice(0, 4);
         return monthDay + '-' + year;
     }
 

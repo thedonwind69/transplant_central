@@ -4,7 +4,8 @@
 
 .post-tabs {
     font-size: 15px;
-    background-color: rgb(41, 81, 131);
+    background-color: rgb(97, 108, 121);
+    background: linear-gradient(rgb(17, 61, 156), rgb(16, 63, 113));
     box-shadow: 1px 1px 1px rgb(145, 165, 198);
     margin: 0;
 }
@@ -21,20 +22,19 @@
     box-shadow: 1px 0px 1px rgb(145, 165, 198);
 }
 .post-tab:hover {
-    background: rgb(83, 148, 228);
-    border-top: 2px solid rgb(221, 85, 85);
+    background: rgb(122, 171, 191);
     cursor: pointer;
 }
 .highlight-category {
     position: relative;
-    background: rgb(83, 148, 228);
+    background: rgb(122, 171, 191);
 }
 .highlight-category:after {
     content: ' ';
     width: 0px;
     height: 0px;
     border-left: 12px solid transparent;
-    border-top: 12px solid rgb(83, 148, 228);
+    border-top: 12px solid rgb(122, 171, 191);
     border-right: 12px solid transparent;
     border-bottom: 12px solid transparent;
     position: absolute;

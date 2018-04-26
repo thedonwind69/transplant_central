@@ -26,7 +26,7 @@ class Greeting extends React.Component {
             <div>
                 {this.currentUserHeading()}
                 <div class="greeting-container">
-                    <h1>Welcome to TransplantCentral</h1>
+                    <h1>TransplantCentral</h1>
                     <p>Where you can review your favorite city</p>
                 </div>
             <HighlightsContainer />

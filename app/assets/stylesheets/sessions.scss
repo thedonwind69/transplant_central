@@ -5,7 +5,6 @@
 .session-form-container {
    display: flex; 
 }
-
 .session-form {
     margin: auto;
     width: 900px;
@@ -15,32 +14,27 @@
     color: white;
     background-size: 100% 100%;
 }
-
 .session-form-background {
     background: image-url('CityStreet.jpg') rgb(146, 173, 193);
     background-size: 100% 100%;
 }
-
 .session-submit-button {
     padding: 7px;
     font-size: 17px;
-    border-radius: 10px;
-    min-width: 200px;
+    border-radius: 5px;
+    min-width: 150px;
     color: white;
-    background-color: rgb(119, 174, 233);
+    background-color: rgb(24, 74, 150);
 }
-
 .session-submit-button:hover {
-    background-color: rgb(249, 129, 129);
+    background-color: rgb(230, 91, 91);
 }
-
 .logout-button {
     border-radius: 7px;
     font-size: 25px;
     color: white;
-    background-color: rgb(148, 148, 148);
+    background-color: rgb(106, 106, 106);
 }
-
 .logout-button:hover {
     background-color: rgb(238, 66, 66);
 }
