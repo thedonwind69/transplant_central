@@ -51,9 +51,7 @@ class CityShow extends React.Component {
 
     changePicLeft (event) {
         event.preventDefault();
-        let cityPic = ReactDOM.findDOMNode(this.refs.cityPic);
         const dotList = ReactDOM.findDOMNode(this.refs.dotList);
-        cityPic.classList.toggle('profile-pic-swoosh');
         this.setState({
             profilePicIndex: this.state.profilePicIndex -= 1
         })
@@ -69,9 +67,7 @@ class CityShow extends React.Component {
 
     changePicRight (event) {
         event.preventDefault();
-        let cityPic = ReactDOM.findDOMNode(this.refs.cityPic);
         const dotList = ReactDOM.findDOMNode(this.refs.dotList);
-        cityPic.classList.toggle('profile-pic-swoosh');
         this.setState({
             profilePicIndex: this.state.profilePicIndex += 1
         })

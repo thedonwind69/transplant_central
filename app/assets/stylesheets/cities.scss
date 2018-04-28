@@ -260,46 +260,6 @@
     -webkit-animation: cityprofilepicfadein 0.8s; /* Safari and Chrome */
     -o-animation: cityprofilepicfadein 0.8s; /* Opera */
 }
-.profile-pic-swoosh {
-    position: relative;
-    animation: swoosh 0.5s;
-    -moz-animation: swoosh 0.5s; /* Firefox */
-    -webkit-animation: swoosh 0.5s; /* Safari and Chrome */
-    -o-animation: swoosh 0.5s; /* Opera */
-}
-//swoosh
-@keyframes swoosh {
-    from {
-        left: -100%;
-    }
-    to {
-        left: 0%;
-    }
-}
-@-moz-keyframes swoosh { /* Firefox */
-    from {
-        left: -100%;
-    }
-    to {
-        left: 0%;
-    }
-}
-@-webkit-keyframes swoosh { /* Safari and Chrome */
-    from {
-        left: -100%;
-    }
-    to {
-        left: 0%;
-    }
-}
-@-o-keyframes swoosh { /* Opera */
-    from {
-        left: -100%;
-    }
-    to {
-        left: 0%;
-    }
-}
 //fade in
 @keyframes cityprofilepicfadein {
     from {
