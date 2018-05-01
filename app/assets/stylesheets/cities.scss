@@ -255,42 +255,42 @@
     background-repeat: no-repeat;
     padding: 0;
     margin: 0;
-    animation: cityprofilepicfadein 2s;
-    -moz-animation: cityprofilepicfadein 2s; /* Firefox */
-    -webkit-animation: cityprofilepicfadein 2s; /* Safari and Chrome */
-    -o-animation: cityprofilepicfadein 2s; /* Opera */
+    animation: cityprofilepicfadein 1s;
+    -moz-animation: cityprofilepicfadein 1s; /* Firefox */
+    -webkit-animation: cityprofilepicfadein 1s; /* Safari and Chrome */
+    -o-animation: cityprofilepicfadein 1s; /* Opera */
 }
 //fade in
 @keyframes cityprofilepicfadein {
     from {
-        opacity: 0;
+        top: -650px;
     }
     to {
-        opacity: 1;
+        top: 0px;
     }
 }
 @-moz-keyframes cityprofilepicfadein { /* Firefox */
     from {
-        opacity: 0;
+        top: -650px;
     }
     to {
-        opacity: 1;
+        top: 0px;
     }
 }
 @-webkit-keyframes cityprofilepicfadein { /* Safari and Chrome */
     from {
-        opacity: 0;
+        top: -650px;
     }
     to {
-        opacity: 1;
+        top: 0px;
     }
 }
 @-o-keyframes cityprofilepicfadein { /* Opera */
     from {
-        opacity: 0;
+        top: -650px;
     }
     to {
-        opacity: 1;
+        top: 0px;
     }
 }
 //end
