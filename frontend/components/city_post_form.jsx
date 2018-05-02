@@ -8,6 +8,7 @@ import {
     HashRouter,
     withRouter
   } from 'react-router-dom';
+import FormButton from './form_button';
 
 class CityPostForm extends React.Component {
     constructor(props) {
@@ -34,29 +35,6 @@ class CityPostForm extends React.Component {
 
     componentWillUnmount () {
         this.props.resetPostErrors();
-    }
-
-    formButton () {
-        if (this.props.currentUser) {
-            return (
-                <div>
-                    <button 
-                        class="city-post-form-button"
-                        onClick={this.toggleForm.bind(this)}
-                        >
-                        Create Review
-                    </button>
-                </div>
-            )
-        } else {
-            return (
-                <div>
-                    <p class='not-logged-in-message'>You are not logged in. To write a review, please <Link to='/login'>
-                    log in</Link> or <Link to='/signup'> sign up!</Link>
-                    </p>
-                </div>
-            )
-        }   
     }
 
     toggleForm () {
@@ -177,7 +155,7 @@ class CityPostForm extends React.Component {
         return (
             <div>
                 <div>
-                    {this.formButton()}
+                    <FormButton currentUser={this.props.currentUser} toggleForm={this.toggleForm.bind(this)}/>
                 </div>
 
                 <br />
@@ -225,8 +203,6 @@ class CityPostForm extends React.Component {
             </div>
         )
     }
-
-
 }
 
 export default withRouter(CityPostForm);
