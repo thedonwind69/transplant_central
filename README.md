@@ -1,6 +1,6 @@
 TransplantCentral is a web application that allows you to review your favorite US metropolitan cities based of a variety of categories and share your living/travel experiences.
 
-###Features:
+### Features:
 
 Technologies used: Ruby on Rails, Ruby, Javascript (ES5/ES6), ReactJS, Redux, PostgreSQL, HTML, CSS, MVC,Webpack, NPM
 
