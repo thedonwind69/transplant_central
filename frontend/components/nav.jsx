@@ -8,8 +8,6 @@ import {
     withRouter
   } from 'react-router-dom';
 
-import SearchBarContainer from './search_bar';
-
   class Nav extends React.Component {
 
     constructor(props){
@@ -30,7 +28,6 @@ import SearchBarContainer from './search_bar';
                             <ul class="nav-bar-list left">
                                 <li><Link class={'tc-link nav-link nav-link-hover'} to="/">TransplantCentral</Link></li>
                                 <li><Link class={'nav-link nav-link-hover'} to="/home">Browse</Link></li>        
-                                {/* <li> <SearchBarContainer /> </li> */}
                             </ul>
                             
                             <ul class="nav-bar-list right">
@@ -48,8 +45,7 @@ import SearchBarContainer from './search_bar';
                 
                             <ul class="nav-bar-list left">
                                 <li> <Link class={'tc-link nav-link nav-link-hover'} to="/">TransplantCentral</Link> </li>
-                                <li> <Link class={'nav-link nav-link-hover'} to="/home">Browse</Link></li>
-                                {/* <li> <SearchBarContainer /> </li> */}
+                                <li> <Link class={'nav-link nav-link-hover'} to="/home">Browse</Link></li>   
                             </ul>
 
                              <ul class="nav-bar-list right">
