@@ -3,6 +3,7 @@
 TransplantCentral is a web application that allows you to review your favorite US metropolitan cities based of a variety of categories and share your living/travel experiences.
 
 ![alt text](https://media.giphy.com/media/fGR0LotJlmSk1R4jG8/giphy.gif)
+![alt text](https://giphy.com/gifs/PNbhplztiARmOgf4RY/html5)
 
 ### Live Site: https://transplantcentral.herokuapp.com/#/
 
