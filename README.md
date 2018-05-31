@@ -55,3 +55,9 @@ A `thunk` action creator is used to successfully link `React` with `Rails`.
     <img src="/screenshots/screen4.png" width="500px" height="200px"</img> 
 </div>
 
+### Star Hover UI Rating
+
+<div>
+    <img src="https://media.giphy.com/media/7OWL4RSNanqyw49MEK/giphy.gif" width="200px" height="500px"</img> 
+</div>
+
