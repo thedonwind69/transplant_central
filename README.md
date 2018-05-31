@@ -27,22 +27,27 @@ Create a review based on 4 categories, star highlight rating for intuitive and c
 
 ### Code Highlights:
 
-### The "C" in CRUD
+### Creating Reviews
 
-Reviews on cities are created using Rails MVC architecture blended with React for UI. Rails controller action creates a post and sends it to the PostgreSQL database.
+Reviews on cities are created using `Rails MVC` architecture blended with `React` for UI. Rails controller action creates a post and sends it to the `PostgreSQL` database.
 
 <div>
     <img src="/screenshots/screen1.png" width="500px" height="200px"</img> 
 </div>
 
-Using a React components local state, being updated as user fills out the post form and submits it, an AJAX request is made to connect with Rails controller and post to the database.
+Using a `React` component's local state, being updated as user fills out the post form and submits it, an `AJAX` request is made to connect with `Rails` controller and post to the database.
 
 <div>
     <img src="/screenshots/screen2.png" width="500px" height="200px"</img> 
 </div>
 
-A thunk action creator is used to successfully link React with Rails.
+A `thunk` action creator is used to successfully link `React` with `Rails`.
 
 <div>
     <img src="/screenshots/screen3.png" width="500px" height="200px"</img> 
 </div>
+
+### Updating Reviews
+
+'Edit Post' button only reveals if the current user is the same as the post's user he/she wants to edit.
+
