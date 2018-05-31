@@ -76,9 +76,9 @@ class CityPostForm extends React.Component {
         }
     }
 
-    getFuckingIndex (element) {
-        const fuckingIndex = Array.prototype.indexOf.call(element.parentNode.children, element);
-        return fuckingIndex;
+    getCurrentIndex (element) {
+        const currentIndex = Array.prototype.indexOf.call(element.parentNode.children, element);
+        return currentIndex;
     }
 
     setStar (field) {
@@ -86,7 +86,7 @@ class CityPostForm extends React.Component {
             event.preventDefault();
             const starList = ReactDOM.findDOMNode(this.refs.starList);
             let star = event.currentTarget;
-            const currentStarIndex = this.getFuckingIndex(star);
+            const currentStarIndex = this.getCurrentIndex(star);
             star.classList.remove('active');
             for (let i=0; i<starList.children.length; i++) {
                 starList.children[i].classList.remove('active');
@@ -106,7 +106,7 @@ class CityPostForm extends React.Component {
         event.preventDefault();
         const starList = ReactDOM.findDOMNode(this.refs.starList);
         let star = event.currentTarget;
-        const currentStarIndex = this.getFuckingIndex(star);
+        const currentStarIndex = this.getCurrentIndex(star);
         star.classList.remove('active');
             for (let i=0; i<starList.children.length; i++) {
                 starList.children[i].classList.remove('active');
