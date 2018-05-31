@@ -4,6 +4,10 @@ TransplantCentral is a web application that allows you to review your favorite U
 
 ![alt text](https://media.giphy.com/media/fGR0LotJlmSk1R4jG8/giphy.gif)
 
+<div>
+    <img src="https://media.giphy.com/media/PNbhplztiARmOgf4RY/giphy.gif" width="500px" height="220px"</img> 
+</div>
+
 ### Live Site: https://transplantcentral.herokuapp.com/#/
 
 ### Features:
