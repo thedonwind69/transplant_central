@@ -51,3 +51,7 @@ A `thunk` action creator is used to successfully link `React` with `Rails`.
 
 'Edit Post' button only reveals if the current user is the same as the post's user he/she wants to edit.
 
+<div>
+    <img src="/screenshots/screen4.png" width="500px" height="200px"</img> 
+</div>
+
