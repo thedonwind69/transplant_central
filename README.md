@@ -27,7 +27,7 @@ Create a review based on 4 categories, star highlight rating for intuitive and c
 
 ### Code Highlights:
 
-![alt text](/Users/donnguyen/Desktop/projects/transplantcentral/screenshots/screen1.png)
+![alt text](/screenshots/screen1.png)
 
 
 
