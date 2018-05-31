@@ -44,5 +44,5 @@ Using a React components local state, being updated as user fills out the post f
 A thunk action creator is used to successfully link React with Rails.
 
 <div>
-    <img src="/screenshots/screen2.png" width="500px" height="200px"</img> 
+    <img src="/screenshots/screen3.png" width="500px" height="200px"</img> 
 </div>
