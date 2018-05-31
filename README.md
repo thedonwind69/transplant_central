@@ -27,13 +27,9 @@ Create a review based on 4 categories, star highlight rating for intuitive and c
 
 ### Code Highlights:
 
-![alt text](/screenshots/screen1.png)
-
 <div>
-    <img src="/screenshots/screen1.png" width="500px" height="300px"</img> 
+    <img src="/screenshots/screen1.png" width="500px" height="200px"</img> 
 </div>
-
-<img src="/screenshots/screen1.png" style=" width:100px ; height:100px " />
 
 
 
