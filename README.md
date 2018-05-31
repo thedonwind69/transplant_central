@@ -27,7 +27,7 @@ Create a review based on 4 categories, star highlight rating for intuitive and c
 
 ### Code Highlights:
 
-![alt text](/screenshots/screen1.png | width=200)
+![test](/screenshots/screen1.png | width=200)
 
 
 
