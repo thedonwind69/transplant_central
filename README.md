@@ -8,10 +8,10 @@ TransplantCentral is a web application that allows you to review your favorite U
 
 ### Features:
 
-Technologies used: Ruby on Rails, Ruby, Javascript (ES5/ES6), ReactJS, Redux, PostgreSQL, HTML, CSS, MVC,Webpack, NPM
+Single-page web application built with `Ruby on Rails` RESTful API, with `Javascript (ES6)` and `React`, `Redux`, `PostgreSQL` database, `HTML/CSS` for styling, `Webpack`, and `NPM`.
 
 1. Login/SignUp Page:
-Log in to an existing account, or sign up using a username and password combination, which allows you to write posts on each city you want.
+User sign up/log in/log out functionality and secure user authentication using `Rails'` `BCrypt` Gem.
 
 2. Greeting Page:
 First, you are brought to the home gretting page, which will welcome you and then display the website's highlights: (Most reviewed city, highest rated city, lowest rated city). 
@@ -20,10 +20,13 @@ First, you are brought to the home gretting page, which will welcome you and the
 Here, you get to browse through the top 20 major US cities that people are moving to and be directed right to the city's show page.
 
 4. City Show Page:
-Where all the good stuff happens: the city's profile picture, total rating based on 4 categories: food, culture, nightlife, economy. Then, an average rating PER category. (You must be logged in to post something).
+The city's profile picture, total rating based on 4 categories: food, culture, nightlife, economy. Then, an average rating PER category. (You must be logged in to post something).
 
-5. City Post Form:
-Create a review based on 4 categories, star highlight rating for intuitive and creative user experience. 
+5. CRUD Features:
+- Create a review using `Rails controller` action and `AJAX` request mixed with `React`, star highlight rating for intuitive and creative user experience. 
+- Read a review by using `Redux`'s state manager to pass down info from database and render it to UI using `React`.
+- Update a review with `Rails` controller and `AJAX` request.
+- Delete review with `Rails` controller action.
 
 ### Code Highlights:
 
