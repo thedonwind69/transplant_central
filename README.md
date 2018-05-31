@@ -64,7 +64,7 @@ A `thunk` action creator is used to successfully link `React` with `Rails`.
 `Vanilla JS` and `DOM Manipulation` used to implement Star UI rating system,
 
 <div>
-    <img src="/screenshots/screen7.png" width="500px" height="200px"</img> 
+    <img src="/screenshots/screen7.png" width="500px" height="320px"</img> 
 </div>
 
 Clicking on a star will highlight all the previous stars, and stay highlighted unless you click on another star, and change the `React` component's local state.
