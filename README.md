@@ -93,13 +93,13 @@ And then hovering away from a star with highlight all the previous stars of the 
 ### City Highlights
 
 <div>
-    <img src="/screenshots/screen12.png" width="560px" height="560px"</img> 
+    <img src="/screenshots/screen12.png" width="40px" height="400px"</img> 
 </div>
 
 Data about all the cities is passed from container component using `Redux` state. Highest rated city, lowest rated city, and most reviewed city are calculated with `Vanilla Javascript`.
 
 <div>
-    <img src="/screenshots/screen13.png" width="560px" height="320px"</img> 
+    <img src="/screenshots/screen13.png" width="600px" height="370px"</img> 
 </div>
 
 `React` is used to create UI component with a link directing user to that city's show page, using `React`'s `Link` and `Router` features. 
