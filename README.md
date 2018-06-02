@@ -93,7 +93,7 @@ And then hovering away from a star with highlight all the previous stars of the 
 ### City Highlights
 
 <div>
-    <img src="/screenshots/screen12.png" width="40px" height="400px"</img> 
+    <img src="/screenshots/screen12.png" width="400px" height="400px"</img> 
 </div>
 
 Data about all the cities is passed from container component using `Redux` state. Highest rated city, lowest rated city, and most reviewed city are calculated with `Vanilla Javascript`.
