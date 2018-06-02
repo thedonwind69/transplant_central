@@ -52,10 +52,20 @@ A `thunk` action creator is used to successfully link `React` with `Rails`.
 
 ### Updating Reviews
 
+<div>
+    <img src="/screenshots/screen4.png" width="500px" height="200px"</img> 
+</div>
+
 'Edit Post' button only reveals if the current user is the same as the post's user he/she wants to edit.
 
 <div>
-    <img src="/screenshots/screen4.png" width="500px" height="200px"</img> 
+    <img src="/screenshots/screen10.png" width="500px" height="200px"</img> 
+</div>
+
+Using `React`'s local state, generates an Object with the post's data and sends it to database with the update `Rails` controller action.
+
+<div>
+    <img src="/screenshots/screen11.png" width="500px" height="200px"</img> 
 </div>
 
 ### Star Hover UI Rating
@@ -71,10 +81,6 @@ A `thunk` action creator is used to successfully link `React` with `Rails`.
 </div>
 
 Clicking on a star will highlight all the previous stars, and stay highlighted unless you click on another star, and change the `React` component's local state.
-
-<div>
-    <img src="/screenshots/screen8.png" width="560px" height="320px"</img> 
-</div>
 
 Hovering over a star with highlight all the previous stars of the one that is currently being hovered over...
 
