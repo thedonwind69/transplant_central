@@ -89,3 +89,17 @@ Hovering over a star with highlight all the previous stars of the one that is cu
 </div>
 
 And then hovering away from a star with highlight all the previous stars of the one that is currently been selected. If no selection has been made yet, all stars are unhighlighted.
+
+### City Highlights
+
+<div>
+    <img src="/screenshots/screen12.png" width="560px" height="560px"</img> 
+</div>
+
+Data about all the cities is passed from container component using `Redux` state. Highest rated city, lowest rated city, and most reviewed city are calculated with `Vanilla Javascript`.
+
+<div>
+    <img src="/screenshots/screen13.png" width="560px" height="320px"</img> 
+</div>
+
+`React` is used to create UI component with a link directing user to that city's show page, using `React`'s `Link` and `Router` features. 
