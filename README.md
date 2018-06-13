@@ -12,7 +12,7 @@ Single-page web application built with `Ruby on Rails` RESTful API, with `Javasc
 
 1. Login/SignUp Page: User sign up/log in/log out functionality and secure user authentication using `Rails'` `BCrypt` Gem.
 
-2. Full responsive desktop page design coded from scratch with HTML/CSS without Bootstrap.
+2. Fully responsive desktop page design coded from scratch with HTML/CSS without Bootstrap.
 
 3. CRUD Features:
 - Create a review using `Rails controller` action and `AJAX` request mixed with `React`, star highlight rating for intuitive and creative user experience. 
