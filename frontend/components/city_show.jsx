@@ -35,12 +35,20 @@ class CityShow extends React.Component {
         }
     }
 
+    componentWillUpdate () {
+        var cityPic = ReactDOM.findDOMNode(this.refs.cityPic);
+        if (cityPic) {
+            cityPic.classList.remove("hide-this-shit");
+        }
+        
+    }
+
     render () {  
         const { currentCity } = this.props;
         if (this.state.loaded) {
             return (
                 <div class="city-main-content">
-                    <div ref="cityPic" class='city-profile-pic-container'>
+                    <div ref="cityPic" class='hide-this-shit city-profile-pic-container'>
                         <CityProfilePic currentCity={currentCity} />
                     </div>
                    
