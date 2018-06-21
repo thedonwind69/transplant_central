@@ -15,11 +15,17 @@ import CityProfilePic from './city_profile_pic';
 class CityShow extends React.Component {
     constructor(props) {
         super(props); 
+        this.state = {
+            loaded: false
+        }
     }
 
     componentDidMount () {
         const { fetchCity } = this.props;
         fetchCity(this.props.match.params.city_id);
+        setTimeout(function() { 
+            this.setState({loaded: true})
+        }.bind(this), 700)
     }
 
     componentWillReceiveProps (newProps) {
@@ -31,10 +37,10 @@ class CityShow extends React.Component {
 
     render () {  
         const { currentCity } = this.props;
+        if (this.state.loaded) {
             return (
                 <div class="city-main-content">
-        
-                    <div ref='cityPic' class='city-profile-pic-container'>
+                    <div ref="cityPic" class='city-profile-pic-container'>
                         <CityProfilePic currentCity={currentCity} />
                     </div>
                    
@@ -46,6 +52,15 @@ class CityShow extends React.Component {
                     <PostsDisplayContainer />
                 </div>
             )
+        } else {
+            return (
+                <div class="city-loader">
+                </div>  
+            )
+            
+        }
+
+            
     }
 }
 
