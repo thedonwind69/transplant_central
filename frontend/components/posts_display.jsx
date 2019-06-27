@@ -70,7 +70,11 @@ class PostsDisplay extends React.Component {
             }
         });
         var finalPosts = allThePosts.filter(Boolean);
-        return finalPosts.reverse();
+        var finalPosts2 = finalPosts.sort(function (a,b) {
+            return b.props.post.id - a.props.post.id;
+        })
+        return finalPosts2;
+        // return finalPosts.reverse();
     }
 
     totalRating () {
