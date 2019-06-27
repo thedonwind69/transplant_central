@@ -115,7 +115,6 @@ class PostIndexItem extends React.Component {
                     <h1 class='post-index-item-subject'>{post.subject}</h1>
                     <div class='post-index-item-content'>
                         <p>{post.content}</p>
-                        <p>{post.id}</p>
                     </div>
                     {this.updateButton()}
                     {this.deleteButton()}

@@ -74,7 +74,6 @@ class PostsDisplay extends React.Component {
             return b.props.post.id - a.props.post.id;
         })
         return finalPosts2;
-        // return finalPosts.reverse();
     }
 
     totalRating () {
@@ -107,7 +106,7 @@ class PostsDisplay extends React.Component {
     }
 
     render () {
-        console.log(this.allThePosts());
+
         return (
             <div>
 
