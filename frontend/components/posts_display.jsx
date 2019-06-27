@@ -12,6 +12,7 @@ import PostIndexItem from './post_index_item';
 import CategoryIndexItem from './category_index_item';
 import TotalRatingStars from './total_rating_stars';
 import PostIndexItemContainer from './post_index_item_container';
+import PostFormUpdateContainer from './post_update_form_container';
 
 class PostsDisplay extends React.Component {
     constructor(props) {
@@ -62,13 +63,14 @@ class PostsDisplay extends React.Component {
 
     allThePosts () {
         const {categories, allPosts} = this.props;
-        const allThePosts = allPosts.map((post) => {
+        var allThePosts = allPosts.map((post) => {
             let currentCategoryId = this.state.currentCategoryId;
             if (post.category_id === parseInt(currentCategoryId)) {
                 return <PostIndexItemContainer post={post} currentCategoryId={this.state.currentCategoryId}  />
             }
         });
-        return allThePosts.reverse();
+        var finalPosts = allThePosts.filter(Boolean);
+        return finalPosts.reverse();
     }
 
     totalRating () {
@@ -101,6 +103,7 @@ class PostsDisplay extends React.Component {
     }
 
     render () {
+        console.log(this.allThePosts());
         return (
             <div>
 
