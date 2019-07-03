@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 import ReactDOM from 'react-dom';
 import {
     Route,
@@ -10,7 +10,7 @@ import {
   } from 'react-router-dom';
 import CityPostFormContainer from './city_post_form_container';
 import PostsDisplayContainer from './posts_display_container';
-import CityProfilePic from './city_profile_pic';
+const CityProfilePic = lazy(() => import('./city_profile_pic'));
 
 class CityShow extends React.Component {
     constructor(props) {
@@ -49,7 +49,9 @@ class CityShow extends React.Component {
             return (
                 <div class="city-main-content">
                     <div ref="cityPic" class='hide-this-shit city-profile-pic-container'>
-                        <CityProfilePic currentCity={currentCity} />
+                        <Suspense fallback={<div>Loading bitch...</div>}>
+                            <CityProfilePic currentCity={currentCity} />
+                        </Suspense>
                     </div>
                    
                     <br />
