@@ -1,13 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-    Route,
-    Redirect,
-    Switch,
-    Link,
-    HashRouter,
-    withRouter
-  } from 'react-router-dom';
 
 class CityProfilePic extends React.Component {
     constructor(props) {
