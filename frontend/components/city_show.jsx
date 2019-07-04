@@ -1,11 +1,6 @@
 import React, {lazy, Suspense} from 'react';
 import ReactDOM from 'react-dom';
 import {
-    Route,
-    Redirect,
-    Switch,
-    Link,
-    HashRouter,
     withRouter
   } from 'react-router-dom';
 import CityPostFormContainer from './city_post_form_container';
@@ -66,11 +61,8 @@ class CityShow extends React.Component {
             return (
                 <div class="city-loader">
                 </div>  
-            )
-            
+            )   
         }
-
-            
     }
 }
 
