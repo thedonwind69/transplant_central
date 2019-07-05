@@ -1,13 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {
-    Route,
-    Redirect,
-    Switch,
     Link,
-    HashRouter,
-    withRouter
-  } from 'react-router-dom';
+} from 'react-router-dom';
 
 class FormButton extends React.Component {
     constructor(props) {
