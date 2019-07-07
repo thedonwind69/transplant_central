@@ -161,9 +161,7 @@ class Highlights extends React.Component {
                             <h1>Lowest Rated City</h1>
                             {this.lowestRatedCityElement()}
                         </div>
-
                 </div>
-
             </div>
         )
     }

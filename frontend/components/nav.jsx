@@ -61,9 +61,7 @@ import {
                     </div>
             )
         }
-        //end of render method
     }
-
   }
  
   export default withRouter(Nav);
