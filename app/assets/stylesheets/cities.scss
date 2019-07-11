@@ -255,42 +255,42 @@
     background-repeat: no-repeat;
     padding: 0;
     margin: 0;
-    animation: cityprofilepicfadein 1s;
-    -moz-animation: cityprofilepicfadein 1s; /* Firefox */
-    -webkit-animation: cityprofilepicfadein 1s; /* Safari and Chrome */
-    -o-animation: cityprofilepicfadein 1s; /* Opera */
+    animation: cityprofilepicfadein 1.5s;
+    -moz-animation: cityprofilepicfadein 1.5s; /* Firefox */
+    -webkit-animation: cityprofilepicfadein 1.5s; /* Safari and Chrome */
+    -o-animation: cityprofilepicfadein 1.5s; /* Opera */
 }
 //fade in
 @keyframes cityprofilepicfadein {
     from {
-        top: -650px;
+        opacity: 0.6;
     }
     to {
-        top: 0px;
+        opacity: 1.0;
     }
 }
 @-moz-keyframes cityprofilepicfadein { /* Firefox */
     from {
-        top: -650px;
+        opacity: 0.6;
     }
     to {
-        top: 0px;
+        opacity: 1.0;
     }
 }
 @-webkit-keyframes cityprofilepicfadein { /* Safari and Chrome */
     from {
-        top: -650px;
+        opacity: 0.6;
     }
     to {
-        top: 0px;
+        opacity: 1.0;
     }
 }
 @-o-keyframes cityprofilepicfadein { /* Opera */
     from {
-        top: -650px;
+        opacity: 0.6;
     }
     to {
-        top: 0px;
+        opacity: 1.0;
     }
 }
 //end
@@ -363,10 +363,6 @@
 .dot-highlight {
     background-color: white;
 }
-
-
-
-
 //--------> Media Queries
 @media screen and (max-width: 1020px) {
     .city-item {
