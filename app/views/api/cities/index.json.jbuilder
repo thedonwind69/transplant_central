@@ -5,4 +5,6 @@ json.array! @all_cities do |city|
     json.description city.description
     json.numberOfPosts city.posts.length
     json.averageRating city.average_rating
+    json.lat city.lat
+    json.lng city.lng
 end
