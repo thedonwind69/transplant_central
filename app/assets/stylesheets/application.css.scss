@@ -248,3 +248,14 @@ input[type='submit'] {
         font-size: 18px;
     }
 }
+
+///map
+#map-container {
+    width: 80%;
+    height: 1000px;
+    margin: auto;
+    border: 10px solid teal;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
