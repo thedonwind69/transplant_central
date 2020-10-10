@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Redirect, withRouter } from 'react-router-dom';
+import {withRouter } from 'react-router-dom';
 
 export class GoogleMapView extends Component {
 
@@ -26,8 +26,26 @@ export class GoogleMapView extends Component {
             CityMarker.addListener('click', () => {
                 this.props.history.push(`/cities/${city.id}`);
             })
-        })
 
+            const contentString =
+                `<div>` +
+                    "<h1>" + city.name + "</h1>"
+                '</div>'
+               
+                ;
+
+            const infowindow = new google.maps.InfoWindow({
+                content: contentString,
+            });
+
+            CityMarker.addListener("mouseover", () => {
+                infowindow.open(this.map, CityMarker);
+            });
+            CityMarker.addListener("mouseout", () => {
+                infowindow.close()
+            });
+
+        })
 
       }
 
